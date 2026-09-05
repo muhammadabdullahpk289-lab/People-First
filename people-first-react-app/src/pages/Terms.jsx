@@ -1,0 +1,3 @@
+export default function Terms() {
+  return <section className="legal-page"><div className="eyebrow">LEGAL</div><h1>Terms &amp; Conditions</h1><p>Replace this starter copy with your final terms and conditions.</p><h2>Use of this website</h2><p>Describe acceptable use, intellectual property and applicable limitations.</p><h2>Changes</h2><p>Explain how updates to these terms will be communicated.</p></section>;
+}

@@ -1,0 +1,48 @@
+.active-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  margin-top: -9px;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../../assets/active-page-img/10002.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* faint diamond/polygon texture over the dark background */
+.polygon-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  z-index: 0;
+}
+
+/* darkens the edges so the center (logo/nav) pops */
+.vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.65) 100%);
+}
+
+.active-content {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* reserved wrapper below the radial nav — leave empty, or use it for
+   a caption/tagline under the logo if you add one later */
+.active-logo-wrap {
+  width: 100%;
+}

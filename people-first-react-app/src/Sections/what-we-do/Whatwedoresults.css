@@ -1,0 +1,241 @@
+.wwdr {
+  width: 100%;
+  background: linear-gradient(to bottom, #faf5ff, #ffffff);
+  padding: 64px 16px;
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  border-radius: 40px 40px 0 0;
+  z-index: 7;
+}
+
+/* ---------------- VENTURES ---------------- */
+
+.wwdr-ventures {
+  max-width: 1152px;
+  margin: 0 auto 96px auto;
+}
+
+.wwdr-ventures-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .wwdr-ventures-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .wwdr-ventures-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.wwdr-venture-card {
+  border-radius: 16px;
+  border: 1px solid;
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease;
+}
+
+.wwdr-venture-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+  transition: 0.3s;
+}
+
+.wwdr-venture-card--purple {
+  border-color: #d8b4fe;
+  background: #faf5ff;
+}
+
+.wwdr-venture-card--teal {
+  border-color: #5eead4;
+  background: #f0fdfa;
+}
+
+.wwdr-venture-card--red {
+  border-color: #fca5a5;
+  background: #fef2f2;
+}
+
+.wwdr-venture-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.wwdr-venture-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.wwdr-venture-title--purple {
+  color: #45185E;
+}
+
+.wwdr-venture-title--teal {
+  color: #39908E;
+}
+
+.wwdr-venture-title--red {
+  color: #A03F60;
+}
+
+.wwdr-venture-desc {
+  color: #4b5563;
+  font-size: 14px;
+}
+
+/* ---------------- RESULTS ---------------- */
+
+.wwdr-results {
+  max-width: 960px;
+  margin: 0 auto 96px auto;
+}
+
+.wwdr-results-heading {
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  color: #111827;
+  margin-bottom: 48px;
+}
+
+.wwdr-results-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 48px;
+  row-gap: 32px;
+}
+
+.wwdr-results-grid .wwdr-result-icon:hover{
+  transform: translatey(-3px);
+}
+
+@media (min-width: 768px) {
+  .wwdr-results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.wwdr-result-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.wwdr-result-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.wwdr-result-title {
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* ---------------- IMPACT FOCUS AREAS ---------------- */
+
+.wwdr-impact {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.wwdr-impact-heading {
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  color: #111827;
+  margin-bottom: 48px;
+}
+
+.wwdr-impact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.wwdr-impact-card:hover{
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+.wwdr-impact-card {
+  transition: background-color 0.3s ease;
+}
+
+.wwdr-impact-text {
+  transition: color 0.3s ease;
+}
+
+.wwdr-impact-card:hover {
+  background-color: #090C62;
+
+}
+
+.wwdr-impact-card:hover .wwdr-impact-desc {
+  color: #D5D5E4;
+}
+
+.wwdr-impact-card:hover .wwdr-impact-title {
+  color: #ffffff;
+}
+
+@media (min-width: 640px) {
+  .wwdr-impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .wwdr-impact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.wwdr-impact-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.wwdr-impact-text {
+  flex: 1;
+}
+
+.wwdr-impact-title {
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.wwdr-impact-desc {
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.wwdr-impact-icon {
+  width: 134px;
+  height: 110px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: -40px;
+}

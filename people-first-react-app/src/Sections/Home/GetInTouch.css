@@ -1,0 +1,780 @@
+/* =====================================================
+   GET IN TOUCH SECTION
+===================================================== */
+
+.get-touch-section {
+  position: relative !important;
+
+  width: 100% !important;
+
+  display: block !important;
+
+  clear: both;
+
+  padding: 48px 35px;
+
+  margin: 0;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+
+  overflow: visible !important;
+
+  visibility: visible !important;
+
+  opacity: 1 !important;
+
+  z-index: 30;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.get-touch-container {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 1150px;
+
+  min-height: 192px;
+
+  margin: 0 auto;
+
+  padding: 38px 50px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1.05fr;
+
+  align-items: center;
+
+  gap: 50px;
+
+  overflow: hidden;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      105deg,
+      #170b52 0%,
+      #29145d 42%,
+      #492054 100%
+    );
+
+  box-shadow:
+    0 12px 35px rgba(29, 17, 74, 0.13);
+
+  box-sizing: border-box;
+
+  z-index: 2;
+
+  visibility: visible;
+
+  opacity: 1;
+}
+
+
+/* =====================================================
+   GLOBE
+===================================================== */
+
+.globe-design {
+  position: absolute;
+
+  left: -95px;
+
+  top: -20px;
+
+  width: 270px;
+
+  height: 270px;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+.globe-image {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  object-position: left top;
+
+  opacity: 0.45;
+
+  user-select: none;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.get-touch-content {
+  position: relative;
+
+  width: 100%;
+
+  padding-left: 155px;
+
+  z-index: 5;
+
+  box-sizing: border-box;
+}
+
+
+.get-touch-content h2 {
+  margin: 0 0 10px;
+
+  color: #f5f5f7;
+
+  font-size: 34px;
+
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  font-style: italic;
+
+  letter-spacing: -0.5px;
+}
+
+
+.get-touch-content p {
+  margin: 0;
+
+  max-width: 430px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 16px;
+
+  line-height: 1.55;
+
+  font-weight: 500;
+}
+
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.get-touch-actions {
+  position: relative;
+
+  width: 100%;
+
+  z-index: 5;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   TOP BUTTONS
+===================================================== */
+
+.top-buttons {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+
+  margin-bottom: 13px;
+}
+
+
+/* =====================================================
+   ALL BUTTONS
+===================================================== */
+
+.get-touch-actions button {
+  width: 100%;
+
+  height: 44px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.get-touch-actions button:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   CONSULTATION
+===================================================== */
+
+.consultation-btn {
+  border: none;
+
+  color: #24304f;
+
+  background: #e6e4e8;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.consultation-btn:hover {
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =====================================================
+   TRAINING
+===================================================== */
+
+.training-btn {
+  color: #ffffff;
+
+  background: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.38);
+}
+
+
+.training-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* =====================================================
+   PARTNER
+===================================================== */
+
+.partner-btn {
+  width: 100%;
+
+  border: none;
+
+  color: #2c2c2c;
+
+  background: #ffffff;
+
+  font-size: 15px !important;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.partner-btn:hover {
+  background: #f2f2f2;
+
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =====================================================
+   1100px
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .get-touch-section {
+    padding: 45px 25px;
+  }
+
+
+  .get-touch-container {
+    padding: 38px 35px;
+
+    gap: 35px;
+  }
+
+
+  .get-touch-content {
+    padding-left: 120px;
+  }
+
+
+  .get-touch-content h2 {
+    font-size: 31px;
+  }
+
+
+  .get-touch-content p {
+    font-size: 15px;
+  }
+
+
+  .globe-design {
+    left: -105px;
+
+    top: -25px;
+
+    width: 250px;
+
+    height: 250px;
+  }
+}
+
+
+/* =====================================================
+   950px
+===================================================== */
+
+@media (max-width: 950px) {
+
+  .get-touch-section {
+    padding: 40px 25px;
+  }
+
+
+  .get-touch-container {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 28px;
+
+    min-height: 0;
+
+    padding: 38px 40px;
+  }
+
+
+  .get-touch-content {
+    width: 100%;
+
+    padding-left: 90px;
+  }
+
+
+  .get-touch-content h2 {
+    font-size: 32px;
+  }
+
+
+  .get-touch-content p {
+    max-width: 600px;
+
+    font-size: 15px;
+  }
+
+
+  .get-touch-actions {
+    width: 100%;
+  }
+
+
+  .globe-design {
+    left: -115px;
+
+    top: -30px;
+
+    width: 240px;
+
+    height: 240px;
+
+    opacity: 0.65;
+  }
+}
+
+
+/* =====================================================
+   768px
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .get-touch-section {
+    padding: 35px 20px;
+  }
+
+
+  .get-touch-container {
+    width: 100%;
+
+    padding: 35px 30px;
+
+    gap: 25px;
+
+    border-radius: 12px;
+  }
+
+
+  .get-touch-content {
+    padding-left: 60px;
+  }
+
+
+  .get-touch-content h2 {
+    font-size: 29px;
+  }
+
+
+  .get-touch-content p {
+    font-size: 14px;
+  }
+
+
+  .get-touch-actions button {
+    height: 46px;
+  }
+
+
+  .globe-design {
+    left: -125px;
+
+    top: -35px;
+
+    width: 225px;
+
+    height: 225px;
+
+    opacity: 0.4;
+  }
+
+
+  .globe-image {
+    opacity: 0.28;
+  }
+}
+
+
+/* =====================================================
+   600px
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .get-touch-section {
+    width: 100%;
+
+    padding: 30px 15px;
+  }
+
+
+  .get-touch-container {
+    width: 100%;
+
+    min-height: 0;
+
+    padding: 35px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 28px;
+
+    overflow: hidden;
+  }
+
+
+  /* CONTENT */
+
+  .get-touch-content {
+    width: 100%;
+
+    padding-left: 0;
+
+    z-index: 5;
+  }
+
+
+  .get-touch-content h2 {
+    font-size: 28px;
+
+    line-height: 1.2;
+  }
+
+
+  .get-touch-content p {
+    width: 100%;
+
+    max-width: 100%;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+  }
+
+
+  .get-touch-content p br {
+    display: none;
+  }
+
+
+  /* ACTIONS */
+
+  .get-touch-actions {
+    width: 100%;
+
+    z-index: 5;
+  }
+
+
+  /* BUTTONS */
+
+  .top-buttons {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    margin-bottom: 10px;
+  }
+
+
+  .get-touch-actions button {
+    width: 100%;
+
+    height: 48px;
+
+    min-height: 48px;
+
+    font-size: 13px;
+  }
+
+
+  .partner-btn {
+    font-size: 14px !important;
+  }
+
+
+  /* GLOBE */
+
+  .globe-design {
+    left: -125px;
+
+    top: -45px;
+
+    width: 210px;
+
+    height: 210px;
+
+    opacity: 0.3;
+  }
+
+
+  .globe-image {
+    opacity: 0.25;
+  }
+}
+
+
+/* =====================================================
+   480px
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .get-touch-section {
+    padding: 25px 12px;
+  }
+
+
+  .get-touch-container {
+    padding: 30px 18px;
+
+    gap: 25px;
+  }
+
+
+  .get-touch-content {
+    padding-left: 0;
+  }
+
+
+  .get-touch-content h2 {
+    font-size: 26px;
+  }
+
+
+  .get-touch-content p {
+    font-size: 13px;
+  }
+
+
+  .get-touch-actions button {
+    height: 46px;
+
+    min-height: 46px;
+
+    font-size: 12px;
+  }
+
+
+  .partner-btn {
+    font-size: 13px !important;
+  }
+
+
+  .globe-design {
+    left: -140px;
+
+    top: -50px;
+
+    width: 200px;
+
+    height: 200px;
+
+    opacity: 0.22;
+  }
+
+
+  .globe-image {
+    opacity: 0.2;
+  }
+}
+
+
+/* =====================================================
+   380px
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .get-touch-section {
+    padding: 22px 10px;
+  }
+
+
+  .get-touch-container {
+    padding: 28px 15px;
+
+    gap: 23px;
+  }
+
+
+  .get-touch-content h2 {
+    font-size: 24px;
+  }
+
+
+  .get-touch-content p {
+    font-size: 12px;
+  }
+
+
+  .get-touch-actions button {
+    height: 45px;
+
+    min-height: 45px;
+
+    font-size: 11px;
+  }
+
+
+  .globe-design {
+    left: -145px;
+
+    top: -50px;
+
+    width: 185px;
+
+    height: 185px;
+
+    opacity: 0.17;
+  }
+
+
+  .globe-image {
+    opacity: 0.16;
+  }
+}
+
+
+/* =====================================================
+   320px
+===================================================== */
+
+@media (max-width: 320px) {
+
+  .get-touch-section {
+    padding-left: 8px;
+
+    padding-right: 8px;
+  }
+
+
+  .get-touch-container {
+    padding: 25px 13px;
+
+    gap: 21px;
+  }
+
+
+  .get-touch-content h2 {
+    font-size: 22px;
+  }
+
+
+  .get-touch-content p {
+    font-size: 11px;
+  }
+
+
+  .get-touch-actions button {
+    height: 43px;
+
+    min-height: 43px;
+
+    font-size: 10px;
+  }
+
+
+  .globe-design {
+    left: -150px;
+
+    top: -50px;
+
+    width: 170px;
+
+    height: 170px;
+
+    opacity: 0.14;
+  }
+
+
+  .globe-image {
+    opacity: 0.14;
+  }
+}

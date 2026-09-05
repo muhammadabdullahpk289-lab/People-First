@@ -1,0 +1,1069 @@
+/* ===========================================================
+   INSIGHTS PAGE — TOKENS
+=========================================================== */
+
+.insights-page {
+  --maroon: #7d1c3f;
+  --maroon-dark: #631631;
+
+  --teal: #2f9c8f;
+  --teal-dark: #3c6f6a;
+
+  --ink: #1f2430;
+  --muted: #6b7280;
+
+  --red: #e0433d;
+
+  --border: #e7e9ee;
+
+  --radius-lg: 20px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+
+  font-family:
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  color: var(--ink);
+
+  background: #fbfdfd;
+
+  width: 100%;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+}
+
+
+/* ===========================================================
+   GLOBAL IMAGE RESET
+=========================================================== */
+
+.insights-page img {
+  border: 0;
+  outline: none;
+  vertical-align: top;
+}
+
+
+/* ===========================================================
+   SITE HEADER
+=========================================================== */
+
+.site-header {
+  padding: 20px 6vw 0;
+}
+
+.site-header__logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.site-header__logo img {
+  height: 57px;
+  width: auto;
+  display: block;
+}
+
+
+/* ===========================================================
+   INSIGHTS HERO
+=========================================================== */
+
+.insights-hero {
+  position: relative;
+
+  padding: 28px 6vw 40px;
+}
+
+.insights-hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  pointer-events: none;
+}
+
+.insights-hero > * {
+  position: relative;
+
+  z-index: 1;
+}
+
+
+/* ===========================================================
+   HERO CONTROLS
+=========================================================== */
+
+.insights-hero__controls {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+
+  gap: 16px;
+}
+
+
+/* ===========================================================
+   HERO ACTIONS
+=========================================================== */
+
+.insights-hero__actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+/* ===========================================================
+   BUTTON
+=========================================================== */
+
+.btn {
+  display: inline-block;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  padding: 12px 20px;
+
+  border-radius: var(--radius-sm);
+
+  text-decoration: none;
+
+  transition:
+    filter 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+
+/* ===========================================================
+   PRIMARY BUTTON
+=========================================================== */
+
+.btn--primary {
+  background: var(--maroon);
+
+  color: #fff;
+}
+
+
+/* ===========================================================
+   SECONDARY BUTTON
+=========================================================== */
+
+.btn--secondary {
+  background: #e9eaee;
+
+  color: var(--ink);
+}
+
+
+/* ===========================================================
+   ICON BUTTON
+=========================================================== */
+
+.icon-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 40px;
+
+  height: 40px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #a78bda;
+
+  cursor: pointer;
+
+  border-radius: 50%;
+
+  transition:
+    background-color 0.15s ease;
+}
+
+.icon-btn:hover {
+  background:
+    rgba(167, 139, 218, 0.12);
+}
+
+
+/* ===========================================================
+   CATEGORY DROPDOWN
+=========================================================== */
+
+.category-dropdown {
+  position: relative;
+
+  display: inline-block;
+}
+
+
+/* ===========================================================
+   DROPDOWN TRIGGER
+=========================================================== */
+
+.category-dropdown__trigger {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 10px 16px;
+
+  background: #fff;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    var(--radius-sm);
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  color: var(--ink);
+
+  cursor: pointer;
+
+  box-shadow:
+    0 1px 2px
+    rgba(16, 24, 40, 0.04);
+}
+
+
+/* ===========================================================
+   DROPDOWN CARET
+=========================================================== */
+
+.category-dropdown__caret {
+  transition:
+    transform 0.15s ease;
+
+  color: var(--muted);
+}
+
+.category-dropdown.is-open
+.category-dropdown__caret {
+  transform: rotate(180deg);
+}
+
+
+/* ===========================================================
+   DROPDOWN LIST
+=========================================================== */
+
+.category-dropdown__list {
+  list-style: none;
+
+  margin: 8px 0 0;
+
+  padding: 6px;
+
+  position: absolute;
+
+  top: 100%;
+
+  left: 0;
+
+  min-width: 200px;
+
+  background: #fff;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    var(--radius-sm);
+
+  box-shadow:
+    0 12px 24px
+    rgba(16, 24, 40, 0.12);
+
+  z-index: 30;
+}
+
+
+/* ===========================================================
+   DROPDOWN ITEM
+=========================================================== */
+
+.category-dropdown__item {
+  width: 100%;
+
+  text-align: left;
+
+  padding: 10px 12px;
+
+  border: none;
+
+  background: transparent;
+
+  border-radius:
+    var(--radius-sm);
+
+  font-size: 0.88rem;
+
+  color: var(--ink);
+
+  cursor: pointer;
+}
+
+.category-dropdown__item:hover {
+  background: #f4f5f7;
+}
+
+.category-dropdown__item.is-active {
+  background:
+    rgba(125, 28, 63, 0.08);
+
+  color: var(--maroon);
+
+  font-weight: 600;
+}
+
+
+/* ===========================================================
+   INSIGHT CARDS WRAPPER
+=========================================================== */
+
+.insight-cards {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 56px;
+
+  padding:
+    0
+    6vw
+    64px;
+
+  box-sizing: border-box;
+}
+
+
+/* ===========================================================
+   INSIGHT CARD
+=========================================================== */
+
+.insight-card {
+  position: relative;
+
+  display: grid;
+
+  margin-top: 100px;
+
+  grid-template-columns:
+    minmax(260px, 520px)
+    1fr;
+
+  align-items: center;
+
+  gap: 48px;
+}
+
+
+/* ===========================================================
+   CARD TEXT
+=========================================================== */
+
+.insight-card__text {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+/* ===========================================================
+   CARD ICON
+=========================================================== */
+
+.insight-card__icon {
+  width: 44px;
+
+  height: 44px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #fff;
+
+  border-radius:
+    var(--radius-sm);
+
+  box-shadow:
+    0 4px 10px
+    rgba(16, 24, 40, 0.08);
+
+  overflow: hidden;
+
+  flex-shrink: 0;
+}
+
+
+/* ===========================================================
+   CARD ICON IMAGE
+=========================================================== */
+
+.insight-card__icon-img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  border: 0;
+
+  outline: none;
+}
+
+
+/* ===========================================================
+   CARD TITLE
+=========================================================== */
+
+.insight-card__title {
+  font-size: 1.55rem;
+
+  line-height: 1.25;
+
+  font-weight: 700;
+
+  margin: 0;
+
+  color: var(--ink);
+}
+
+
+/* ===========================================================
+   CARD DESCRIPTION
+=========================================================== */
+
+.insight-card__description {
+  font-size: 0.95rem;
+
+  line-height: 1.55;
+
+  color: var(--muted);
+
+  margin: 0;
+
+  max-width: 42ch;
+}
+
+
+/* ===========================================================
+   CARD STAT
+=========================================================== */
+
+.insight-card__stat {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 12px;
+
+  margin-top: 6px;
+}
+
+
+/* ===========================================================
+   STAT VALUE
+=========================================================== */
+
+.insight-card__stat-value {
+  font-size: 2.2rem;
+
+  font-weight: 800;
+
+  color: var(--red);
+
+  line-height: 1;
+}
+
+
+/* ===========================================================
+   STAT LABEL
+=========================================================== */
+
+.insight-card__stat-label {
+  font-size: 0.78rem;
+
+  line-height: 1.35;
+
+  color: var(--muted);
+}
+
+
+/* ===========================================================
+   IMAGE MEDIA WRAPPER
+=========================================================== */
+
+.insight-card__media {
+  position: relative;
+
+  width: 100%;
+
+  z-index: 1;
+}
+
+
+/* ===========================================================
+   GRADIENT ONLY BEHIND IMAGE
+=========================================================== */
+
+.insight-card__media::before {
+  content: "";
+
+  position: absolute;
+
+  width: 125%;
+
+  height: 140%;
+
+  left: -12.5%;
+
+  top: -20%;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(86, 193, 219, 0.78) 0%,
+      rgba(153, 213, 228, 0.42) 22%,
+      rgba(157, 221, 237, 0) 52%
+    ),
+
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(145, 149, 194, 0.78) 0%,
+      rgba(193, 197, 255, 0.42) 23%,
+      rgba(193, 197, 255, 0) 55%
+    ),
+
+    radial-gradient(
+      circle at 18% 90%,
+      rgba(224, 86, 197, 0.836) 0%,
+      rgba(239, 164, 224, 0.42) 24%,
+      rgba(239, 164, 224, 0) 55%
+    ),
+
+    radial-gradient(
+      circle at 90% 90%,
+      rgba(250, 208, 183, 0.72) 0%,
+      rgba(250, 208, 183, 0.38) 24%,
+      rgba(250, 208, 183, 0) 56%
+    ),
+
+    linear-gradient(
+      135deg,
+      #e8f8fb 0%,
+      #f6f7ff 40%,
+      #fff7fc 70%,
+      #fff2e9 100%
+    );
+
+  filter: blur(35px);
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+
+/* ===========================================================
+   MAIN IMAGE
+=========================================================== */
+
+.insight-card__image {
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 10;
+
+  object-fit: cover;
+
+  border-radius:
+    var(--radius-lg);
+
+  background: #eef0f3;
+
+  box-shadow:
+    0 20px 40px
+    rgba(16, 24, 40, 0.12);
+}
+
+
+/* ===========================================================
+   YEAR BADGE
+=========================================================== */
+
+.insight-card__badge {
+  position: absolute;
+
+  left: -32px;
+
+  bottom: 56px;
+
+  background:
+    var(--teal-dark);
+
+  color: #fff;
+
+  padding: 18px 20px;
+
+  border-radius:
+    var(--radius-sm);
+
+  min-width: 150px;
+
+  box-shadow:
+    0 12px 24px
+    rgba(16, 24, 40, 0.18);
+
+  z-index: 3;
+}
+
+
+/* ===========================================================
+   BADGE YEAR
+=========================================================== */
+
+.insight-card__badge-year {
+  display: block;
+
+  font-size: 1.7rem;
+
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+
+/* ===========================================================
+   BADGE LABEL
+=========================================================== */
+
+.insight-card__badge-label {
+  display: block;
+
+  margin-top: 6px;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.03em;
+}
+
+
+/* ===========================================================
+   CARD CAPTION
+=========================================================== */
+
+.insight-card__caption {
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  padding: 14px 20px;
+
+  background:
+    rgba(0, 0, 0, 0.65);
+
+  color: #fff;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.01em;
+
+  border-radius:
+    0
+    0
+    var(--radius-lg)
+    var(--radius-lg);
+}
+
+
+/* ===========================================================
+   EMPTY STATE
+=========================================================== */
+
+.insight-cards__empty {
+  color: var(--muted);
+
+  font-size: 0.95rem;
+
+  padding: 40px 0;
+
+  text-align: center;
+}
+
+
+/* ===========================================================
+   PODCAST TEASER
+=========================================================== */
+
+.podcast-teaser {
+  display: grid;
+
+  grid-template-columns:
+    minmax(220px, 360px)
+    1fr;
+
+  gap: 32px;
+
+  align-items: center;
+
+  margin:
+    0
+    6vw
+    64px;
+
+  padding: 20px;
+
+  background: #fff;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius:
+    var(--radius-lg);
+
+  text-decoration: none;
+
+  color: inherit;
+
+  transition:
+    box-shadow 0.15s ease;
+}
+
+.podcast-teaser:hover {
+  box-shadow:
+    0 12px 28px
+    rgba(16, 24, 40, 0.1);
+}
+
+
+/* ===========================================================
+   PODCAST IMAGE
+=========================================================== */
+
+.podcast-teaser__image {
+  width: 100%;
+
+  aspect-ratio: 16 / 10;
+
+  object-fit: cover;
+
+  border-radius:
+    var(--radius-md);
+
+  background: #eef0f3;
+}
+
+
+/* ===========================================================
+   PODCAST EYEBROW
+=========================================================== */
+
+.podcast-teaser__eyebrow {
+  display: block;
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+  color: var(--teal-dark);
+
+  margin-bottom: 8px;
+}
+
+
+/* ===========================================================
+   PODCAST TITLE
+=========================================================== */
+
+.podcast-teaser__title {
+  font-size: 1.2rem;
+
+  font-weight: 700;
+
+  margin:
+    0
+    0
+    8px;
+
+  color: var(--ink);
+}
+
+
+/* ===========================================================
+   PODCAST DESCRIPTION
+=========================================================== */
+
+.podcast-teaser__description {
+  font-size: 0.9rem;
+
+  line-height: 1.5;
+
+  color: var(--muted);
+
+  margin:
+    0
+    0
+    12px;
+
+  max-width: 52ch;
+}
+
+
+/* ===========================================================
+   PODCAST CTA
+=========================================================== */
+
+.podcast-teaser__cta {
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  color: var(--maroon);
+}
+
+
+/* ===========================================================
+   TABLET
+=========================================================== */
+
+@media (max-width: 900px) {
+
+  .insight-card,
+  .podcast-teaser {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+
+
+  .insight-card__media::before {
+    width: 120%;
+
+    height: 125%;
+
+    left: -10%;
+
+    top: -12%;
+  }
+
+
+  .insight-card__badge {
+    left: 16px;
+
+    bottom: -24px;
+  }
+}
+
+
+/* ===========================================================
+   MOBILE
+=========================================================== */
+
+@media (max-width: 560px) {
+
+  .site-header {
+    padding:
+      16px
+      5vw
+      0;
+  }
+
+
+  .site-header__logo img {
+    height: 48px;
+  }
+
+
+  .insights-hero {
+    padding:
+      24px
+      5vw
+      32px;
+  }
+
+
+  .insights-hero__controls {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+
+  .insights-hero__actions {
+    width: 100%;
+
+    flex-wrap: wrap;
+  }
+
+
+  .insight-cards {
+    gap: 42px;
+
+    padding:
+      0
+      5vw
+      48px;
+  }
+
+
+  .insight-card {
+    gap: 22px;
+
+    margin-top: 70px;
+  }
+
+
+  /* ------------------------------
+     MOBILE IMAGE GRADIENT
+  ------------------------------ */
+
+  .insight-card__media::before {
+    width: 140%;
+
+    height: 135%;
+
+    left: -20%;
+
+    top: -17%;
+
+    filter: blur(30px);
+  }
+
+
+  .insight-card__title {
+    font-size: 1.3rem;
+  }
+
+
+  .insight-card__description {
+    font-size: 0.9rem;
+  }
+
+
+  .insight-card__stat-value {
+    font-size: 1.9rem;
+  }
+
+
+  .insight-card__badge {
+    left: 16px;
+
+    bottom: -24px;
+
+    min-width: 130px;
+
+    padding:
+      14px
+      16px;
+  }
+
+
+  .insight-card__badge-year {
+    font-size: 1.45rem;
+  }
+}
+
+
+/* ===========================================================
+   SMALL MOBILE
+=========================================================== */
+
+@media (max-width: 380px) {
+
+  .insights-hero__actions {
+    gap: 8px;
+  }
+
+
+  .btn {
+    font-size: 0.8rem;
+
+    padding:
+      10px
+      14px;
+  }
+
+
+  .insight-card__icon {
+    width: 40px;
+
+    height: 40px;
+  }
+
+
+  .insight-card__title {
+    font-size: 1.2rem;
+  }
+
+
+  .insight-card__media::before {
+    width: 150%;
+
+    height: 140%;
+
+    left: -25%;
+
+    top: -20%;
+  }
+}

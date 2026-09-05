@@ -1,0 +1,439 @@
+/* =====================================================
+   BRAND ARCHITECTURE
+===================================================== */
+.brand-architecture {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 76px 60px 120px;
+  box-sizing: border-box;
+  background: #ffffff;
+  overflow: hidden;
+  font-family: "Inter", Arial, sans-serif;
+  z-index: 7;
+}
+
+.brand-purple-shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 470px;
+  height: auto;
+  object-fit: contain;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.brand-content {
+  position: relative;
+  z-index: 2;
+  max-width: 690px;
+}
+
+.brand-label {
+  display: block;
+  margin: 0 0 17px;
+  color: #292929;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.brand-content h1 {
+  margin: 0;
+  color: #0c0c0f;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -1.8px;
+}
+
+.brand-content h1 span {
+  color: #652174;
+}
+
+.brand-line {
+  width: 220px;
+  height: 3px;
+  margin: 13px 0 20px;
+  background: linear-gradient(
+    to right,
+    #6d227d 0%,
+    #6d227d 65%,
+    rgba(109, 34, 125, 0) 100%
+  );
+}
+
+.brand-content p {
+  max-width: 680px;
+  margin: 0 0 20px;
+  color: #36363a;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.58;
+}
+
+/* =====================================================
+   ECOSYSTEM CARD
+===================================================== */
+.ecosystem-card {
+  position: relative;
+  z-index: 3;
+  width: calc(100% - 64px);
+  max-width: 1128px;
+  min-height: 142px;
+  margin: 43px auto 0;
+  padding: 18px 22px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr 1fr;
+  align-items: stretch;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #53145f 0%, #742184 50%, #9b3fab 100%);
+  box-shadow: 0 17px 30px rgba(70, 30, 80, 0.28);
+  color: #ffffff;
+}
+
+.ecosystem-title {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 22px 0 0;
+  box-sizing: border-box;
+}
+
+.ecosystem-title img {
+  width: 78px;
+  height: 78px;
+  min-width: 78px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.ecosystem-title h2 {
+  margin: 0;
+  max-width: 230px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+}
+
+.ecosystem-text {
+  min-width: 0;
+  padding: 0 30px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.ecosystem-text p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.48;
+}
+
+.ecosystem-text-center,
+.ecosystem-text-right {
+  border-left: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.ecosystem-text-center {
+  padding-left: 31px;
+  padding-right: 31px;
+}
+
+.ecosystem-text-right {
+  padding-left: 31px;
+  padding-right: 24px;
+}
+
+/* =====================================================
+   EVOLUTIONARY PIPELINE
+===================================================== */
+.evolutionary-pipeline {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1150px;
+  margin: 90px auto 0;
+}
+
+.pipeline-heading {
+  margin: 0 0 70px;
+  text-align: center;
+  color: #111111;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  align-items: stretch;
+}
+
+.pipeline-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 440px;
+  padding: 38px 20px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #f3f1f3;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pipeline-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.10);
+}
+
+.pipeline-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.pipeline-number {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.pipeline-card--green .pipeline-number { background: #2d8379; }
+.pipeline-card--blue .pipeline-number { background: #175c9c; }
+.pipeline-card--purple .pipeline-number { background: #64215f; }
+
+.pipeline-stage {
+  display: block;
+  margin-bottom: 4px;
+  color: #3f3f42;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+}
+
+.pipeline-heading-text h3 {
+  margin: 0;
+  color: #111111;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.pipeline-description {
+  margin: 0 0 12px;
+  color: #65656a;
+  font-size: 10px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.pipeline-items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.pipeline-item {
+  padding: 8px 10px;
+  background: #ffffff;
+  border: 1px solid #dddddf;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+.pipeline-item h4 {
+  margin: 0 0 2px;
+  color: #222222;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.pipeline-item p {
+  margin: 0;
+  color: #77777b;
+  font-size: 7.5px;
+  line-height: 1.35;
+}
+
+.pipeline-education {
+  flex: 1;
+  min-height: 178px;
+  margin: 28px 12px 20px;
+  padding: 22px 18px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #c8d9e8;
+  border-radius: 11px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.pipeline-education-icon {
+  margin-bottom: 13px;
+  color: #17609f;
+}
+
+.pipeline-education h4 {
+  max-width: 190px;
+  margin: 0 0 10px;
+  color: #1b5c99;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.pipeline-education p {
+  max-width: 205px;
+  margin: 0;
+  color: #77777b;
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+.pipeline-outcome {
+  min-height: 54px;
+  margin: auto -20px 0;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.pipeline-card--green .pipeline-outcome { background: #9ac7c9; }
+.pipeline-card--blue .pipeline-outcome { background: #78a2c5; }
+.pipeline-card--purple .pipeline-outcome { background: #9887b2; }
+
+.pipeline-outcome-label {
+  padding-top: 2px;
+  color: #111111;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+
+.pipeline-outcome-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pipeline-outcome-content strong {
+  color: #111111;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.pipeline-outcome-content span {
+  color: #333333;
+  font-size: 7.5px;
+  line-height: 1.35;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+@media (max-width: 1000px) {
+  .brand-architecture { padding: 65px 40px 90px; }
+  .brand-purple-shape { width: 380px; }
+  .brand-content { max-width: 620px; }
+  .brand-content h1 { font-size: 43px; }
+
+  .ecosystem-card {
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 25px;
+  }
+  .ecosystem-title { padding: 0 0 22px; }
+  .ecosystem-text {
+    min-height: auto;
+    padding: 20px 0;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .evolutionary-pipeline { margin-top: 75px; }
+  .pipeline-grid {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  .pipeline-card { min-height: 430px; }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+@media (max-width: 600px) {
+  .brand-architecture { padding: 50px 22px 70px; border-radius: 30px; }
+  .brand-purple-shape { width: 230px; top: -5px; right: -35px; opacity: 0.95; }
+  .brand-content { max-width: 100%; }
+  .brand-label { margin-bottom: 13px; font-size: 11px; letter-spacing: 2.2px; }
+  .brand-content h1 { font-size: 34px; line-height: 1.15; letter-spacing: -1px; }
+  .brand-line { width: 170px; height: 3px; margin: 12px 0 18px; }
+  .brand-content p { margin-bottom: 18px; font-size: 15px; line-height: 1.55; }
+
+  .ecosystem-card { width: 100%; margin-top: 30px; padding: 22px 18px; border-radius: 10px; }
+  .ecosystem-title { gap: 12px; padding: 0 0 20px; }
+  .ecosystem-title img { width: 58px; height: 58px; }
+  .ecosystem-title h2 { font-size: 19px; }
+  .ecosystem-text { padding: 18px 0; }
+  .ecosystem-text p { font-size: 13px; line-height: 1.5; }
+
+  .evolutionary-pipeline { margin-top: 65px; }
+  .pipeline-heading { margin-bottom: 35px; font-size: 27px; }
+  .pipeline-grid { grid-template-columns: 1fr; gap: 22px; }
+  .pipeline-card { min-height: 0; padding: 30px 16px 0; border-radius: 13px; }
+  .pipeline-header { margin-bottom: 22px; }
+  .pipeline-number { width: 36px; height: 36px; min-width: 36px; font-size: 14px; }
+  .pipeline-heading-text h3 { font-size: 17px; }
+  .pipeline-description { font-size: 11px; line-height: 1.55; }
+  .pipeline-item { padding: 10px; }
+  .pipeline-item h4 { font-size: 11px; }
+  .pipeline-item p { font-size: 8.5px; }
+  .pipeline-education { min-height: 200px; margin: 25px 5px 20px; padding: 20px 14px; }
+  .pipeline-education h4 { font-size: 13px; }
+  .pipeline-education p { font-size: 9px; }
+  .pipeline-outcome { margin-left: -16px; margin-right: -16px; min-height: 62px; padding: 12px 16px; gap: 10px; }
+  .pipeline-outcome-label { font-size: 7px; }
+  .pipeline-outcome-content strong { font-size: 10px; }
+  .pipeline-outcome-content span { font-size: 8px; }
+}
+
+@media (max-width: 400px) {
+  .brand-architecture { padding-left: 18px; padding-right: 18px; }
+  .brand-content h1 { font-size: 30px; }
+  .brand-content p { font-size: 14px; }
+  .ecosystem-title h2 { font-size: 17px; }
+  .pipeline-heading { font-size: 24px; }
+  .pipeline-card { padding-left: 14px; padding-right: 14px; }
+  .pipeline-outcome { margin-left: -14px; margin-right: -14px; }
+}

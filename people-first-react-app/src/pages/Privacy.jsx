@@ -1,0 +1,3 @@
+export default function Privacy() {
+  return <section className="legal-page"><div className="eyebrow">LEGAL</div><h1>Privacy Policy</h1><p>Replace this starter copy with your final privacy policy.</p><h2>Information we collect</h2><p>Describe the information your website collects and why it is needed.</p><h2>How we use information</h2><p>Describe your lawful purposes, retention practices and user rights.</p></section>;
+}

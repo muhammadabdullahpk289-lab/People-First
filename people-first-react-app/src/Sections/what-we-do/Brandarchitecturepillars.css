@@ -1,0 +1,297 @@
+/* =====================================================
+   BRAND ARCHITECTURE PILLARS — SECTION WRAPPER
+===================================================== */
+
+.ba-section {
+  position: relative;
+  width: 100%;
+  padding: 70px 60px 90px;
+  box-sizing: border-box;
+  background: #ffffff;
+  overflow: hidden;
+  font-family: "Inter", Arial, sans-serif;
+  z-index: 7;
+}
+
+/* purple blob top-left decorative shape */
+.ba-blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 380px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.ba-header {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.ba-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+.ba-header-line {
+  flex: 1;
+  max-width: 60px;
+  height: 1px;
+  background: rgba(90, 60, 160, 0.45);
+}
+
+.ba-header-top h1 {
+  margin: 0;
+  color: #0c0c14;
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.ba-header h2 {
+  margin: 0 0 16px;
+  color: #14141c;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.ba-header p {
+  margin: 0 auto;
+  max-width: 640px;
+  color: #6a6a72;
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+/* =====================================================
+   CARD GRID
+===================================================== */
+
+.ba-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.ba-card {
+  position: relative;
+  padding: 26px 26px 26px 30px;
+  box-sizing: border-box;
+  border-radius: 0 0 14px 14px;
+  background: #f3eef6;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(60, 30, 90, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-radius 0.25s ease;
+}
+
+.ba-card:hover {
+  border-radius: 14px;
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(60, 30, 90, 0.1);
+}
+
+/* colored left accent bar */
+.ba-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 50%;
+  margin-top: 20px;
+  border-radius: 10px 0 4px 0;
+  transition: height 0.25s ease, border-radius 0.25s ease;
+}
+
+.ba-card:hover::before {
+  height: 100%;
+  border-radius: 0;
+}
+
+.ba-card--core::before { background: #7a3fc4; }
+.ba-card--joint::before { background: #1f6f6a; }
+.ba-card--affiliated::before { background: #8a3fc4; }
+.ba-card--genesis::before { background: #7a1f3a; }
+
+/* =====================================================
+   CARD HEADER
+===================================================== */
+
+.ba-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.ba-card-icon {
+  width: 70px;
+  height: 70px;
+  min-width: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ba-card-icon img {
+  width: 54px;
+  height: 74px;
+  object-fit: contain;
+}
+
+.ba-card--core .ba-card-icon { background: #e6dcf7; }
+.ba-card--joint .ba-card-icon { background: #d9ebe9; }
+.ba-card--affiliated .ba-card-icon { background: #eee0fa; }
+.ba-card--genesis .ba-card-icon { background: #f2dbe2; }
+
+.ba-card-header h3 {
+  margin: 0;
+  color: #17171f;
+  font-size: 17.5px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+/* =====================================================
+   CARD TEXT
+===================================================== */
+
+.ba-card-text {
+  margin: 0 0 12px;
+  color: #55555d;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+.ba-card-purpose {
+  margin: 0 0 12px;
+  color: #55555d;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+.ba-card-purpose strong {
+  display: block;
+  margin-bottom: 4px;
+  color: purple;
+  font-size: 13.5px;
+  font-weight: 800;
+}
+
+/* =====================================================
+   BULLET LIST (CORE VENTURES ONLY)
+===================================================== */
+
+.ba-card-list {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ba-card-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #3d3d44;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.ba-card-check {
+  width: 15px;
+  height: 15px;
+  min-width: 15px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: #1f6f6a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =====================================================
+   CARD FOOTER TAGLINE
+===================================================== */
+
+.ba-card-footer {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ba-card--core .ba-card-footer { color: #7a3fc4; }
+.ba-card--joint .ba-card-footer { color: #1f6f6a; }
+.ba-card--affiliated .ba-card-footer { color: #8a3fc4; }
+.ba-card--genesis .ba-card-footer { color: #7a1f3a; }
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+  .ba-section {
+    padding: 55px 30px 70px;
+  }
+
+  .ba-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+
+  .ba-header h2 {
+    font-size: 22px;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 500px) {
+  .ba-header-top h1 {
+    font-size: 16px;
+    letter-spacing: 2.5px;
+  }
+
+  .ba-header-line {
+    max-width: 30px;
+  }
+
+  .ba-header h2 {
+    font-size: 19px;
+  }
+
+  .ba-header p {
+    font-size: 12.5px;
+  }
+
+  .ba-card {
+    padding: 22px 20px 22px 24px;
+  }
+}

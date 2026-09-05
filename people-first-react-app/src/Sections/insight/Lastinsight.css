@@ -1,0 +1,176 @@
+/* ===========================================================
+   LastInsight — tokens
+   =========================================================== */
+.last-insight {
+  --teal: #8c3fb8;
+  --ink: #14161f;
+  --muted: #5b6472;
+  --link: #7a819b;
+  --border: #eef0f4;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+
+  position: relative;
+  padding: 48px 6vw;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: #f4f2f8;
+  overflow: hidden;
+}
+
+.last-insight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: #FBFDFD;
+  pointer-events: none;
+}
+
+/* ===========================================================
+   Card
+   =========================================================== */
+.last-insight__card {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(280px, 390px) 1fr;
+  gap: 56px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 60px rgba(20, 22, 31, 0.08);
+}
+
+/* ===========================================================
+   Media (image + play button + badge)
+   =========================================================== */
+.last-insight__media {
+  position: relative;
+}
+
+.last-insight__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3.3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background: #d9dce3;
+  border: 0;
+  transition: 0.3s;
+}
+
+.last-insight__image:hover{
+  transform: scale(1.04);
+}
+
+.last-insight__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.last-insight__play:hover {
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+.last-insight__play svg {
+  margin-left: 3px; /* optically center the triangle */
+}
+
+.last-insight__badge {
+  position: absolute;
+  left: -24px;
+  bottom: -24px;
+  background: var(--teal);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  padding: 18px 22px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 14px 28px rgba(63, 184, 150, 0.3);
+}
+
+/* ===========================================================
+   Content
+   =========================================================== */
+.last-insight__content {
+  position: relative;
+}
+
+.last-insight__title {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 32px;
+  max-width: 26ch;
+}
+
+.last-insight__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.last-insight__column-heading {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+
+.last-insight__column-description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--link);
+  margin: 0;
+}
+
+/* ===========================================================
+   Responsive
+   =========================================================== */
+@media (max-width: 860px) {
+  .last-insight__card {
+    grid-template-columns: 1fr;
+    gap: 64px 0;
+    padding: 28px;
+  }
+
+  .last-insight__badge {
+    left: 16px;
+    bottom: -16px;
+  }
+
+  .last-insight__title {
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .last-insight__columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .last-insight__title {
+    font-size: 1.5rem;
+  }
+}

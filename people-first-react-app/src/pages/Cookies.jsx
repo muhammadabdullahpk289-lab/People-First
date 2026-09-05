@@ -1,0 +1,3 @@
+export default function Cookies() {
+  return <section className="legal-page"><div className="eyebrow">LEGAL</div><h1>Cookie Policy</h1><p>Replace this starter copy with your final cookie policy.</p><h2>What cookies are</h2><p>Explain which cookies your website uses and what each category does.</p><h2>Your choices</h2><p>Explain how visitors can manage or disable non-essential cookies.</p></section>;
+}

@@ -1,0 +1,746 @@
+/* =====================================================
+   WHAT WE DO HERO WRAPPER
+   Hero ke liye scroll space
+===================================================== */
+
+.whatwedohero-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 155vh;
+
+  margin: 0;
+
+  padding: 0;
+
+  background: transparent;
+
+  overflow: visible;
+
+  z-index: 1;
+}
+
+
+/* =====================================================
+   WHAT WE DO HERO
+   STICKY HERO
+===================================================== */
+
+.whatwedohero {
+  position: sticky;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding: 45px 70px 30px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(157, 217, 225, 0.5),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(224, 202, 229, 0.45),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f7f7f9 0%,
+      #f4f4f7 50%,
+      #f5f2f6 100%
+    );
+
+  z-index: 5;
+}
+
+
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.whatwedohero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(193, 223, 232, 0.18),
+      transparent 45%,
+      rgba(229, 213, 232, 0.2)
+    );
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.whatwedohero-container {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 1150px;
+
+  min-height: calc(100vh - 75px);
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+
+  z-index: 2;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.whatwedohero-logo {
+  position: absolute;
+
+  top: 5px;
+
+  left: 0;
+
+  width: 210px;
+
+  z-index: 5;
+}
+
+
+.whatwedohero-logo img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.whatwedohero-title {
+  position: relative;
+
+  width: 100%;
+
+  text-align: center;
+
+  padding-top: 28px;
+
+  z-index: 3;
+}
+
+
+.whatwedohero-title h1 {
+  margin: 0;
+
+  color: #32316c;
+
+  font-size: clamp(28px, 3vw, 40px);
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  line-height: 1.2;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   PAIN POINTS IMAGE WRAPPER
+===================================================== */
+
+.whatwedohero-image {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin-top: 35px;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  overflow: visible;
+
+  z-index: 3;
+}
+
+
+/* =====================================================
+   PAIN POINTS IMAGE
+===================================================== */
+
+.whatwedohero-image img {
+  display: block;
+
+  width: 100%;
+
+  max-width: 900px;
+
+  height: auto;
+
+  max-height: 70vh;
+
+  object-fit: contain;
+
+  user-select: none;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   NEXT SECTION
+   Ecosystem Hero ke UPAR aayega
+===================================================== */
+
+.whatwedohero-wrapper + .ecosystem-scroll-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  z-index: 20;
+
+  background: transparent;
+}
+
+
+/* =====================================================
+   LARGE LAPTOP
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .whatwedohero-wrapper {
+    min-height: 155vh;
+  }
+
+  .whatwedohero-image img {
+    width: 100%;
+
+    max-width: 1000px;
+
+    height: calc(100vh - 240px);
+
+    min-height: 320px;
+
+    max-height: 650px;
+
+    object-fit: contain;
+  }
+
+  .whatwedohero {
+    padding: 40px 45px 30px;
+  }
+
+
+  .whatwedohero-container {
+    max-width: 1050px;
+  }
+
+
+  .whatwedohero-logo {
+    width: 190px;
+  }
+
+
+  .whatwedohero-image img {
+    max-width: 850px;
+
+    max-height: 68vh;
+  }
+}
+
+
+/* =====================================================
+   TABLET / LAPTOP
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .whatwedohero-wrapper {
+    min-height: 150vh;
+
+    overflow: visible;
+  }
+
+  
+   .whatwedohero-image img {
+    width: 100%;
+
+    max-width: 100%;
+
+    height: calc(100vh - 230px);
+
+    min-height: 300px;
+
+    max-height: 620px;
+
+    object-fit: contain;
+  }
+
+  .whatwedohero {
+    position: sticky;
+
+    top: 0;
+
+    min-height: 100vh;
+
+    padding: 35px 30px 40px;
+
+    overflow: hidden;
+  }
+
+
+  .whatwedohero-container {
+    min-height: calc(100vh - 75px);
+
+    max-width: 100%;
+  }
+
+
+  .whatwedohero-logo {
+    position: relative;
+
+    top: auto;
+
+    left: auto;
+
+    width: 180px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .whatwedohero-title {
+    padding-top: 0;
+  }
+
+
+  .whatwedohero-image {
+    margin-top: 30px;
+  }
+
+
+  .whatwedohero-image img {
+    width: 100%;
+
+    max-width: 100%;
+
+    max-height: 65vh;
+
+    height: auto;
+  }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .whatwedohero-wrapper {
+    min-height: 150vh;
+  }
+
+
+  .whatwedohero {
+    min-height: 100vh;
+
+    padding: 30px 20px 35px;
+  }
+
+
+  .whatwedohero-image {
+    margin-top: 25px;
+  }
+
+  .whatwedohero-image img {
+    width: 100%;
+
+    max-width: 100%;
+
+    height: calc(100vh - 260px);
+
+    min-height: 280px;
+
+    max-height: 560px;
+
+    object-fit: contain;
+  }
+
+  .whatwedohero-container {
+    min-height: calc(100vh - 65px);
+  }
+
+
+  .whatwedohero-logo {
+    width: 170px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .whatwedohero-title h1 {
+    font-size: clamp(25px, 5vw, 32px);
+  }
+
+
+  .whatwedohero-image {
+    margin-top: 25px;
+  }
+
+
+  .whatwedohero-image img {
+    width: 100%;
+
+    max-width: 100%;
+
+    max-height: 60vh;
+
+    min-width: 0;
+
+    height: auto;
+
+    object-fit: contain;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .whatwedohero-wrapper {
+    min-height: 145vh;
+
+    position: relative;
+
+    overflow: visible;
+  }
+
+
+  .whatwedohero-image {
+    width: 100%;
+
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: visible;
+  }
+
+  .whatwedohero-image img {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    /*
+      Mobile par title aur logo ke baad
+      bachi hui screen height use hogi
+    */
+    height: calc(100vh - 260px);
+
+    min-height: 240px;
+
+    max-height: 520px;
+
+    object-fit: contain;
+  }
+
+  .whatwedohero {
+    position: sticky;
+
+    top: 0;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 25px 15px 30px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+  }
+
+
+  .whatwedohero-container {
+    width: 100%;
+
+    min-height: calc(100vh - 55px);
+
+    max-width: 100%;
+  }
+
+
+  .whatwedohero-logo {
+    position: relative;
+
+    top: auto;
+
+    left: auto;
+
+    width: 150px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .whatwedohero-title {
+    padding-top: 0;
+  }
+
+
+  .whatwedohero-title h1 {
+    font-size: clamp(21px, 7vw, 27px);
+
+    line-height: 1.25;
+
+    letter-spacing: 0;
+
+    text-align: center;
+  }
+
+
+  .whatwedohero-image {
+    width: 100%;
+
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: visible;
+  }
+
+
+  .whatwedohero-image img {
+    display: block;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    height: auto;
+
+    max-height: 58vh;
+
+    object-fit: contain;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .whatwedohero-wrapper {
+    min-height: 145vh;
+  }
+
+
+  .whatwedohero {
+    min-height: 100vh;
+
+    padding: 22px 12px 28px;
+  }
+
+   .whatwedohero-image {
+    margin-top: 20px;
+  }
+
+  .whatwedohero-image img {
+    width: 100%;
+    max-width: 100%;
+
+    height: calc(100vh - 245px);
+
+    min-height: 220px;
+
+    max-height: 460px;
+
+    object-fit: contain;
+  }
+
+  .whatwedohero-container {
+    min-height: calc(100vh - 50px);
+  }
+
+
+  .whatwedohero-logo {
+    width: 140px;
+
+    margin-bottom: 18px;
+  }
+
+
+  .whatwedohero-title h1 {
+    font-size: clamp(20px, 7vw, 24px);
+
+    line-height: 1.2;
+  }
+
+
+  .whatwedohero-image {
+    margin-top: 20px;
+  }
+
+
+  .whatwedohero-image img {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    max-height: 55vh;
+
+    height: auto;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .whatwedohero-wrapper {
+    min-height: 150vh;
+  }
+
+  .whatwedohero-image img {
+    width: 100%;
+    max-width: 100%;
+
+    height: calc(100vh - 230px);
+
+    min-height: 200px;
+
+    max-height: 400px;
+
+    object-fit: contain;
+  }
+
+
+  .whatwedohero {
+    min-height: 100vh;
+
+    padding: 20px 10px 25px;
+  }
+
+
+  .whatwedohero-container {
+    min-height: calc(100vh - 45px);
+  }
+
+
+  .whatwedohero-logo {
+    width: 130px;
+
+    margin-bottom: 15px;
+  }
+
+
+  .whatwedohero-title h1 {
+    font-size: 19px;
+
+    line-height: 1.2;
+  }
+
+
+  .whatwedohero-image {
+    margin-top: 18px;
+  }
+
+
+  .whatwedohero-image img {
+    width: 100%;
+
+    max-width: 100%;
+
+    max-height: 52vh;
+
+    height: auto;
+  }
+}
+
+
+/* =====================================================
+   EXTRA SMALL
+===================================================== */
+
+@media (max-width: 320px) {
+
+  .whatwedohero {
+    padding-left: 8px;
+
+    padding-right: 8px;
+  }
+
+
+  .whatwedohero-title h1 {
+    font-size: 18px;
+  }
+
+
+  .whatwedohero-logo {
+    width: 120px;
+  }
+
+
+  .whatwedohero-image img {
+    max-height: 50vh;
+  }
+}

@@ -1,0 +1,1301 @@
+/* =====================================================
+   PEOPLE FIRST ECOSYSTEM
+   STICKY SCROLL WRAPPER
+===================================================== */
+
+.ecosystem-scroll-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  overflow: visible;
+  z-index: 5;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* =====================================================
+   MAIN ECOSYSTEM SECTION
+   STAYS ON TOP WHILE SCROLLING
+===================================================== */
+
+.ecosystem-section {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 65px 40px 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 30px;
+  background:
+    linear-gradient(
+      180deg,
+      #f8f8fa 0%,
+      #f5f4f8 45%,
+      #f3f1f8 100%
+    );
+
+  z-index: 10;
+   box-shadow: 
+    0 -1px 14px rgba(0, 0, 0, 0.1),
+    0 -1px 19px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =====================================================
+   BACKGROUND GLOWS
+===================================================== */
+
+.ecosystem-glow {
+  position: absolute;
+
+  pointer-events: none;
+
+  border-radius: 50%;
+
+  filter: blur(90px);
+
+  z-index: 0;
+}
+
+
+.ecosystem-glow-left {
+  width: 400px;
+
+  height: 400px;
+
+  top: 120px;
+
+  left: -180px;
+
+  background: rgba(126, 216, 235, 0.22);
+}
+
+
+.ecosystem-glow-right {
+  width: 450px;
+
+  height: 450px;
+
+  right: -200px;
+
+  bottom: -200px;
+
+  background: rgba(190, 148, 231, 0.2);
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.ecosystem-container {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 1080px;
+
+  margin: 0 auto;
+
+  z-index: 2;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.ecosystem-heading {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0 0 62px;
+
+  text-align: center;
+
+  z-index: 3;
+}
+
+
+.ecosystem-heading h1 {
+  margin: 0 0 13px;
+
+  color: #171b24;
+
+  font-size: clamp(30px, 3vw, 39px);
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  line-height: 1.1;
+}
+
+
+.ecosystem-heading p {
+  width: 100%;
+
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #252933;
+
+  font-size: clamp(15px, 1.5vw, 21px);
+
+  font-weight: 400;
+
+  line-height: 1.25;
+
+  letter-spacing: 0.4px;
+}
+
+
+/* =====================================================
+   CARDS GRID
+===================================================== */
+
+.ecosystem-cards {
+  position: relative;
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+
+  align-items: stretch;
+
+  z-index: 3;
+}
+
+
+/* =====================================================
+   COMMON CARD
+===================================================== */
+
+.ecosystem-card {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 335px;
+
+  overflow: hidden;
+
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.28);
+
+  display: flex;
+
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   CARD HEADER
+===================================================== */
+
+.ecosystem-card-header {
+  width: 100%;
+
+  height: 42px;
+
+  min-height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  color: #ffffff;
+}
+
+
+.ecosystem-card-header h2 {
+  margin: 0;
+
+  color: #f4f4f4;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+
+/* =====================================================
+   NUMBER CIRCLE
+===================================================== */
+
+.stage-number {
+  width: 31px;
+
+  height: 31px;
+
+  min-width: 31px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #f2f4f6;
+
+  color: #516170;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  flex-shrink: 0;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.stage-description {
+  min-height: 42px;
+
+  padding: 8px 12px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  color: #59606b;
+
+  font-size: 8px;
+
+  line-height: 1.45;
+}
+
+
+/* =====================================================
+   PHYSICAL CARD
+===================================================== */
+
+.physical-card {
+  border: 1px solid #6f9fa3;
+}
+
+
+.physical-card .ecosystem-card-header {
+  background:
+    linear-gradient(
+      90deg,
+      #72a8aa,
+      #628f93
+    );
+}
+.physical-card .ecosystem-list-item:hover{
+   transform: translatey(-5px);
+}
+
+/* =====================================================
+   MIND CARD
+===================================================== */
+
+.mind-card {
+  border: 1px solid #1d4f80;
+}
+
+
+.mind-card .ecosystem-card-header {
+  background:
+    linear-gradient(
+      90deg,
+      #25598b,
+      #214b78
+    );
+}
+.mind-card .mind-inner-card:hover{
+   transform: translatey(-5px);
+}
+
+/* =====================================================
+   MARKET CARD
+===================================================== */
+
+.market-card {
+  border: 1px solid #554080;
+}
+
+
+.market-card .ecosystem-card-header {
+  background:
+    linear-gradient(
+      90deg,
+      #51417a,
+      #4a3a70
+    );
+}
+
+.market-card .ecosystem-list-item:hover{
+   transform: translatey(-5px);
+}
+
+/* =====================================================
+   LISTS
+===================================================== */
+
+.physical-list,
+.market-list {
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0 20px 15px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   LIST ITEM
+===================================================== */
+
+.ecosystem-list-item {
+  width: 100%;
+
+  min-height: 43px;
+
+  padding: 8px 20px;
+
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.3);
+
+  box-sizing: border-box;
+}
+
+
+.physical-card .ecosystem-list-item {
+  border: 1px solid #76a8ad;
+}
+
+
+.market-card .ecosystem-list-item {
+  border: 1px solid #76a8ad;
+}
+
+
+.ecosystem-list-item h3 {
+  margin: 0 0 3px;
+
+  color: #4d535c;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+.ecosystem-list-item p {
+  margin: 0;
+
+  color: #707780;
+
+  font-size: 7px;
+
+  line-height: 1.25;
+}
+
+
+/* =====================================================
+   MIND CONTENT
+===================================================== */
+
+.mind-content {
+  flex: 1;
+
+  width: 100%;
+
+  padding: 5px 20px 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+
+.mind-inner-card {
+  width: 100%;
+
+  min-height: 155px;
+
+  padding: 22px 20px;
+
+  border: 1px solid #9aaebd;
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+
+.mind-icon {
+  margin-bottom: 9px;
+
+  color: #29577e;
+}
+
+
+.mind-inner-card h3 {
+  margin: 0 0 16px;
+
+  color: #365978;
+
+  font-size: 10px;
+
+  line-height: 1.25;
+
+  font-weight: 700;
+}
+
+
+.mind-inner-card p {
+  margin: 0;
+
+  max-width: 240px;
+
+  color: #646c75;
+
+  font-size: 7px;
+
+  line-height: 1.4;
+}
+
+
+/* =====================================================
+   CHAT BUTTON
+===================================================== */
+
+.ecosystem-chat {
+  position: fixed;
+
+  right: 42px;
+
+  bottom: 28px;
+
+  width: 45px;
+
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  background: transparent;
+
+  color: #bc52ff;
+
+  cursor: pointer;
+
+  z-index: 100;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.ecosystem-chat:hover {
+  transform: scale(1.1);
+}
+
+
+/* =====================================================
+   NEXT SECTION
+   NEXT SECTION WILL COME FROM BELOW
+===================================================== */
+
+.ecosystem-scroll-wrapper + section,
+.ecosystem-scroll-wrapper + div {
+  position: relative;
+
+  width: 100%;
+
+  background: #ffffff;
+
+  z-index: 20;
+}
+
+
+/*
+  Important:
+  Next section should not have negative margin
+  otherwise sticky effect break ho sakta hai.
+*/
+
+.ecosystem-scroll-wrapper + section {
+  margin-top: 0;
+}
+
+
+/* =====================================================
+   LARGE LAPTOP
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .ecosystem-scroll-wrapper {
+    min-height: 155vh;
+  }
+
+
+  .ecosystem-section {
+    padding: 55px 25px 30px;
+  }
+
+
+  .ecosystem-container {
+    max-width: 950px;
+  }
+
+
+  .ecosystem-heading {
+    margin-bottom: 50px;
+  }
+
+
+  .ecosystem-cards {
+    gap: 15px;
+  }
+
+
+  .physical-list,
+  .market-list {
+    padding-left: 15px;
+
+    padding-right: 15px;
+  }
+
+
+  .ecosystem-list-item {
+    padding-left: 15px;
+
+    padding-right: 15px;
+  }
+
+
+  .ecosystem-glow-left {
+    width: 350px;
+
+    height: 350px;
+
+    left: -170px;
+  }
+
+
+  .ecosystem-glow-right {
+    width: 400px;
+
+    height: 400px;
+
+    right: -180px;
+  }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .ecosystem-scroll-wrapper {
+    min-height: 150vh;
+
+    position: relative;
+
+    overflow: visible;
+  }
+
+
+  .ecosystem-section {
+    position: sticky;
+
+    top: 0;
+
+    min-height: 100vh;
+
+    padding: 50px 25px 30px;
+
+    overflow: hidden;
+  }
+
+
+  .ecosystem-container {
+    max-width: 750px;
+  }
+
+
+  .ecosystem-heading {
+    margin-bottom: 40px;
+  }
+
+
+  .ecosystem-heading h1 {
+    font-size: 32px;
+  }
+
+
+  .ecosystem-heading p {
+    font-size: 17px;
+  }
+
+
+  .ecosystem-cards {
+    grid-template-columns:
+      1fr
+      1fr;
+
+    gap: 15px;
+  }
+
+
+  .ecosystem-card {
+    min-height: 330px;
+  }
+
+
+  .market-card {
+    grid-column: span 2;
+
+    min-height: 300px;
+  }
+
+
+  .ecosystem-glow-left {
+    width: 330px;
+
+    height: 330px;
+
+    left: -170px;
+
+    top: 100px;
+  }
+
+
+  .ecosystem-glow-right {
+    width: 350px;
+
+    height: 350px;
+
+    right: -170px;
+
+    bottom: -150px;
+  }
+
+
+  .ecosystem-chat {
+    right: 25px;
+
+    bottom: 22px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .ecosystem-scroll-wrapper {
+    min-height: 145vh;
+
+    position: relative;
+
+    overflow: visible;
+  }
+
+
+  .ecosystem-section {
+    position: sticky;
+
+    top: 0;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 40px 15px 45px;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+  }
+
+
+  .ecosystem-container {
+    width: 100%;
+
+    max-width: 100%;
+  }
+
+
+  .ecosystem-heading {
+    margin-bottom: 30px;
+  }
+
+
+  .ecosystem-heading h1 {
+    font-size: 27px;
+
+    line-height: 1.15;
+  }
+
+
+  .ecosystem-heading p {
+    font-size: 15px;
+
+    line-height: 1.3;
+  }
+
+
+  /* ==============================
+     MOBILE CARDS
+  ============================== */
+
+  .ecosystem-cards {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .market-card {
+    grid-column: auto;
+  }
+
+
+  .ecosystem-card {
+    width: 100%;
+
+    min-height: auto;
+  }
+
+
+  /* ==============================
+     HEADER
+  ============================== */
+
+  .ecosystem-card-header {
+    height: 50px;
+
+    min-height: 50px;
+  }
+
+
+  .ecosystem-card-header h2 {
+    font-size: 13px;
+  }
+
+
+  .stage-number {
+    width: 30px;
+
+    height: 30px;
+
+    min-width: 30px;
+
+    font-size: 13px;
+  }
+
+
+  /* ==============================
+     DESCRIPTION
+  ============================== */
+
+  .stage-description {
+    min-height: auto;
+
+    padding: 13px 15px;
+
+    font-size: 10px;
+
+    line-height: 1.45;
+  }
+
+
+  /* ==============================
+     LISTS
+  ============================== */
+
+  .physical-list,
+  .market-list {
+    padding: 5px 15px 20px;
+
+    gap: 8px;
+  }
+
+
+  .ecosystem-list-item {
+    min-height: 58px;
+
+    padding: 11px 15px;
+  }
+
+
+  .ecosystem-list-item h3 {
+    font-size: 13px;
+
+    line-height: 1.25;
+  }
+
+
+  .ecosystem-list-item p {
+    font-size: 9px;
+
+    line-height: 1.4;
+  }
+
+
+  /* ==============================
+     MIND CARD
+  ============================== */
+
+  .mind-content {
+    padding: 20px 15px;
+  }
+
+
+  .mind-inner-card {
+    min-height: 190px;
+
+    padding: 25px 20px;
+  }
+
+
+  .mind-inner-card h3 {
+    font-size: 13px;
+  }
+
+
+  .mind-inner-card p {
+    font-size: 9px;
+
+    line-height: 1.4;
+  }
+
+
+  /* ==============================
+     GLOWS
+  ============================== */
+
+  .ecosystem-glow-left {
+    width: 300px;
+
+    height: 300px;
+
+    top: 100px;
+
+    left: -180px;
+
+    filter: blur(70px);
+
+    opacity: 0.75;
+  }
+
+
+  .ecosystem-glow-right {
+    width: 320px;
+
+    height: 320px;
+
+    right: -180px;
+
+    bottom: -120px;
+
+    filter: blur(70px);
+
+    opacity: 0.75;
+  }
+
+
+  /* ==============================
+     CHAT
+  ============================== */
+
+  .ecosystem-chat {
+    right: 18px;
+
+    bottom: 18px;
+
+    width: 42px;
+
+    height: 42px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .ecosystem-scroll-wrapper {
+    min-height: 150vh;
+  }
+
+
+  .ecosystem-section {
+    padding:
+      35px
+      12px
+      40px;
+  }
+
+
+  .ecosystem-heading {
+    margin-bottom: 28px;
+  }
+
+
+  .ecosystem-heading h1 {
+    font-size: 24px;
+
+    letter-spacing: 0.5px;
+  }
+
+
+  .ecosystem-heading p {
+    font-size: 13px;
+
+    line-height: 1.4;
+  }
+
+
+  .ecosystem-cards {
+    gap: 16px;
+  }
+
+
+  .ecosystem-card-header {
+    height: 47px;
+
+    min-height: 47px;
+  }
+
+
+  .ecosystem-card-header h2 {
+    font-size: 12px;
+  }
+
+
+  .stage-number {
+    width: 28px;
+
+    height: 28px;
+
+    min-width: 28px;
+
+    font-size: 12px;
+  }
+
+
+  .stage-description {
+    padding:
+      11px
+      12px;
+
+    font-size: 9px;
+  }
+
+
+  .physical-list,
+  .market-list {
+    padding:
+      5px
+      12px
+      17px;
+
+    gap: 7px;
+  }
+
+
+  .ecosystem-list-item {
+    min-height: 55px;
+
+    padding:
+      10px
+      12px;
+  }
+
+
+  .ecosystem-list-item h3 {
+    font-size: 12px;
+  }
+
+
+  .ecosystem-list-item p {
+    font-size: 8px;
+  }
+
+
+  .mind-content {
+    padding:
+      15px
+      12px
+      18px;
+  }
+
+
+  .mind-inner-card {
+    min-height: 175px;
+
+    padding:
+      20px
+      15px;
+  }
+
+
+  .mind-inner-card h3 {
+    font-size: 12px;
+
+    margin-bottom: 12px;
+  }
+
+
+  .mind-inner-card p {
+    font-size: 8px;
+  }
+
+
+  .ecosystem-glow-left {
+    width: 270px;
+
+    height: 270px;
+
+    left: -170px;
+
+    filter: blur(60px);
+  }
+
+
+  .ecosystem-glow-right {
+    width: 280px;
+
+    height: 280px;
+
+    right: -170px;
+
+    filter: blur(60px);
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .ecosystem-scroll-wrapper {
+    min-height: 155vh;
+  }
+
+
+  .ecosystem-section {
+    padding:
+      30px
+      10px
+      35px;
+  }
+
+
+  .ecosystem-heading {
+    margin-bottom: 25px;
+  }
+
+
+  .ecosystem-heading h1 {
+    font-size: 22px;
+  }
+
+
+  .ecosystem-heading p {
+    font-size: 12px;
+  }
+
+
+  .ecosystem-cards {
+    gap: 14px;
+  }
+
+
+  .ecosystem-card-header {
+    height: 44px;
+
+    min-height: 44px;
+  }
+
+
+  .ecosystem-card-header h2 {
+    font-size: 11px;
+  }
+
+
+  .stage-number {
+    width: 26px;
+
+    height: 26px;
+
+    min-width: 26px;
+
+    font-size: 11px;
+  }
+
+
+  .stage-description {
+    font-size: 8px;
+
+    padding:
+      10px
+      10px;
+  }
+
+
+  .ecosystem-list-item {
+    min-height: 52px;
+
+    padding:
+      9px
+      10px;
+  }
+
+
+  .ecosystem-list-item h3 {
+    font-size: 11px;
+  }
+
+
+  .ecosystem-list-item p {
+    font-size: 7.5px;
+  }
+
+
+  .mind-inner-card {
+    min-height: 160px;
+  }
+
+
+  .mind-inner-card h3 {
+    font-size: 11px;
+  }
+
+
+  .mind-inner-card p {
+    font-size: 7.5px;
+  }
+
+
+  .ecosystem-chat {
+    right: 14px;
+
+    bottom: 14px;
+
+    width: 40px;
+
+    height: 40px;
+  }
+}
+
+
+/* =====================================================
+   EXTRA SMALL
+===================================================== */
+
+@media (max-width: 320px) {
+
+  .ecosystem-section {
+    padding-left: 8px;
+
+    padding-right: 8px;
+  }
+
+
+  .ecosystem-heading h1 {
+    font-size: 20px;
+  }
+
+
+  .ecosystem-heading p {
+    font-size: 11px;
+  }
+
+
+  .ecosystem-card-header h2 {
+    font-size: 10px;
+  }
+
+
+  .ecosystem-list-item h3 {
+    font-size: 10px;
+  }
+
+
+  .ecosystem-list-item p {
+    font-size: 7px;
+  }
+}

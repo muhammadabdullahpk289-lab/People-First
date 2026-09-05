@@ -1,0 +1,1182 @@
+/* =====================================================
+   ABOUT KEY SECTION
+===================================================== */
+
+.about-key {
+  position: relative;
+
+  width: 100%;
+  min-height: 600px;
+
+  padding: 40px 52px 65px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: #702461;
+
+  color: #ffffff;
+}
+
+
+
+
+/* =====================================================
+   TOP CONTENT
+===================================================== */
+
+.about-key-top {
+  display: grid;
+
+  grid-template-columns: 35% 65%;
+
+  align-items: start;
+
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   LEFT INTRO
+===================================================== */
+
+.about-key-intro {
+  padding-top: 12px;
+}
+
+
+/* =====================================================
+   BADGE
+===================================================== */
+
+.about-key-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 22px;
+
+  padding: 0 9px;
+
+  box-sizing: border-box;
+
+  border-radius: 2px;
+
+  background: #ffffff;
+
+  color: #74225e;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* =====================================================
+   KEY STATS HEADING
+===================================================== */
+
+.about-key-intro h2 {
+  margin: 17px 0 15px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 47px;
+
+  line-height: 0.95;
+
+  font-weight: 900;
+
+  letter-spacing: -1.5px;
+
+  color: #ffffff;
+}
+
+.about-key-intro h2 span {
+  color: #ffc400;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.about-key-intro p {
+  width: 315px;
+
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  font-weight: 500;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   RIGHT STATS
+===================================================== */
+
+.about-key-stats {
+  width: 100%;
+
+  padding-left: 15px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BIG STAT CARD
+===================================================== */
+
+.about-stat-big {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  height: 101px;
+
+  padding: 0 31px;
+
+  box-sizing: border-box;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #34124a;
+}
+
+
+.about-stat-big strong {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 49px;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+
+  color: #57205e;
+}
+
+
+/* =====================================================
+   STAT LABEL
+===================================================== */
+
+.about-stat-label {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-width: 70px;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.about-stat-label span {
+  font-size: 10px;
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  color: #080808;
+}
+
+
+.about-stat-label small {
+  margin-top: 2px;
+
+  font-size: 10px;
+
+  line-height: 1.1;
+
+  font-weight: 400;
+
+  color: #1b1b1b;
+}
+
+
+/* =====================================================
+   SMALL STAT WRAPPER
+===================================================== */
+
+.about-stat-small-wrapper {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+
+  margin-top: 16px;
+}
+
+
+/* =====================================================
+   SMALL STAT CARD
+===================================================== */
+
+.about-stat-small {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  height: 74px;
+
+  padding: 0 21px;
+
+  box-sizing: border-box;
+
+  border-radius: 7px;
+
+  background: #ffffff;
+}
+
+
+.about-stat-small strong {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 32px;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  color: #10028e;
+}
+
+
+/* =====================================================
+   PARTNERS HEADING
+===================================================== */
+
+.about-key-partners-heading {
+  width: 100%;
+
+  margin-top: 73px;
+
+  margin-bottom: 33px;
+
+  text-align: center;
+}
+
+
+.about-key-partners-heading h2 {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 38px;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+
+  color: #f6d9ff;
+}
+
+
+/* =====================================================
+   MARQUEE CONTAINER
+===================================================== */
+
+.about-key-marquee {
+  position: relative;
+
+  width: calc(70% + 104px);
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   EACH ROW
+===================================================== */
+
+.about-key-marquee-row {
+  position: relative;
+
+  width: 80%;
+
+  margin-left: 140px;
+
+  overflow: hidden;
+
+  margin-bottom: 15px;
+}
+
+
+.about-key-marquee-row:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =====================================================
+   MOVING TRACK
+===================================================== */
+
+.about-key-track {
+  display: flex;
+
+  align-items: center;
+
+  width: max-content;
+
+  gap: 16px;
+
+  will-change: transform;
+}
+
+
+/* =====================================================
+   FIRST ROW ANIMATION
+===================================================== */
+
+.about-key-track-right {
+  animation: aboutKeyMoveRight 25s linear infinite;
+}
+
+
+/* =====================================================
+   SECOND ROW ANIMATION
+===================================================== */
+
+.about-key-track-left {
+  animation: aboutKeyMoveLeft 25s linear infinite;
+}
+
+
+/* =====================================================
+   LOGO BOX
+===================================================== */
+
+.about-key-logo {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex: 0 0 198px;
+
+  width: 198px;
+
+  height: 116px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   LOGO IMAGE
+===================================================== */
+
+.about-key-logo img {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  padding: 10px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   FIRST ROW
+===================================================== */
+
+.about-key-track-right {
+  transform: translateX(-120px);
+}
+
+
+/* =====================================================
+   SECOND ROW
+===================================================== */
+
+.about-key-track-left {
+  transform: translateX(-700px);
+}
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes aboutKeyMoveRight {
+
+  0% {
+    transform: translateX(-600px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+
+}
+
+
+@keyframes aboutKeyMoveLeft {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-600px);
+  }
+
+}
+
+
+/* =====================================================
+   STOP ANIMATION ON HOVER
+===================================================== */
+
+.about-key-marquee:hover .about-key-track {
+  animation-play-state: paused;
+}
+
+
+/* =====================================================
+   LARGE SCREEN
+===================================================== */
+
+@media (min-width: 1200px) {
+
+  .about-key {
+    min-height: 603px;
+
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+
+  .about-key-top {
+    max-width: 1050px;
+  }
+
+
+  .about-key-marquee {
+    width: calc(100% + 110px);
+
+    margin-left: -55px;
+  }
+
+}
+
+
+/* =====================================================
+   TABLET
+   901px - 1199px
+===================================================== */
+
+@media (min-width: 901px) and (max-width: 1199px) {
+
+  .about-key {
+    padding: 42px 35px 60px;
+  }
+
+
+  .about-key-top {
+    grid-template-columns: 40% 60%;
+
+    max-width: 100%;
+
+    gap: 20px;
+  }
+
+
+  .about-key-intro {
+    padding-top: 8px;
+  }
+
+
+  .about-key-intro h2 {
+    font-size: 42px;
+  }
+
+
+  .about-key-intro p {
+    width: 100%;
+
+    max-width: 330px;
+
+    font-size: 13px;
+  }
+
+
+  .about-key-stats {
+    padding-left: 0;
+  }
+
+
+  .about-stat-big {
+    height: 95px;
+
+    padding: 0 25px;
+  }
+
+
+  .about-stat-big strong {
+    font-size: 44px;
+  }
+
+
+  .about-stat-small {
+    height: 70px;
+
+    padding: 0 18px;
+  }
+
+
+  .about-stat-small strong {
+    font-size: 29px;
+  }
+
+
+  .about-key-partners-heading {
+    margin-top: 60px;
+
+    margin-bottom: 28px;
+  }
+
+
+  .about-key-partners-heading h2 {
+    font-size: 32px;
+  }
+
+
+  .about-key-marquee {
+    width: calc(100% + 70px);
+
+    margin-left: -35px;
+  }
+
+
+  .about-key-marquee-row {
+    width: 85%;
+
+    margin-left: 100px;
+  }
+
+
+  .about-key-logo {
+    flex-basis: 175px;
+
+    width: 175px;
+
+    height: 100px;
+  }
+
+}
+
+
+/* =====================================================
+   TABLET PORTRAIT
+   601px - 900px
+===================================================== */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+  .about-key {
+    padding: 45px 30px 60px;
+  }
+
+
+  /* TOP CONTENT */
+
+  .about-key-top {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    max-width: 650px;
+  }
+
+
+  /* INTRO */
+
+  .about-key-intro {
+    padding-top: 0;
+
+    text-align: center;
+  }
+
+
+  .about-key-badge {
+    font-size: 10px;
+  }
+
+
+  .about-key-intro h2 {
+    margin-top: 16px;
+
+    font-size: 44px;
+  }
+
+
+  .about-key-intro p {
+    width: 100%;
+
+    max-width: 550px;
+
+    margin: 0 auto;
+
+    font-size: 14px;
+  }
+
+
+  /* STATS */
+
+  .about-key-stats {
+    padding-left: 0;
+  }
+
+
+  .about-stat-big {
+    height: 100px;
+
+    padding: 0 28px;
+  }
+
+
+  .about-stat-big strong {
+    font-size: 46px;
+  }
+
+
+  .about-stat-small-wrapper {
+    gap: 14px;
+  }
+
+
+  .about-stat-small {
+    height: 72px;
+
+    padding: 0 20px;
+  }
+
+
+  .about-stat-small strong {
+    font-size: 31px;
+  }
+
+
+  /* PARTNERS */
+
+  .about-key-partners-heading {
+    margin-top: 60px;
+
+    margin-bottom: 28px;
+  }
+
+
+  .about-key-partners-heading h2 {
+    font-size: 30px;
+  }
+
+
+  /* MARQUEE */
+
+  .about-key-marquee {
+    width: calc(100% + 60px);
+
+    margin-left: -30px;
+  }
+
+
+  .about-key-marquee-row {
+    width: 100%;
+
+    margin-left: 0;
+
+    margin-bottom: 12px;
+  }
+
+
+  .about-key-track {
+    gap: 12px;
+  }
+
+
+  .about-key-logo {
+    flex-basis: 165px;
+
+    width: 165px;
+
+    height: 92px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   401px - 600px
+===================================================== */
+
+@media (min-width: 401px) and (max-width: 600px) {
+
+  .about-key {
+    padding: 35px 20px 50px;
+  }
+
+
+  /* =====================================================
+     TOP CONTENT
+  ===================================================== */
+
+  .about-key-top {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+    max-width: 100%;
+  }
+
+
+  /* =====================================================
+     INTRO
+  ===================================================== */
+
+  .about-key-intro {
+    padding-top: 0;
+
+    text-align: left;
+  }
+
+
+  .about-key-badge {
+    min-height: 21px;
+
+    padding: 0 8px;
+
+    font-size: 9px;
+  }
+
+
+  .about-key-intro h2 {
+    margin: 16px 0 13px;
+
+    font-size: 40px;
+
+    line-height: 0.95;
+  }
+
+
+  .about-key-intro p {
+    width: 100%;
+
+    max-width: 100%;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+  }
+
+
+  /* =====================================================
+     BIG STAT
+  ===================================================== */
+
+  .about-stat-big {
+    height: 88px;
+
+    padding: 0 20px;
+
+    border-radius: 8px;
+  }
+
+
+  .about-stat-big strong {
+    font-size: 40px;
+  }
+
+
+  .about-stat-label {
+    min-width: 65px;
+  }
+
+
+  .about-stat-label span,
+  .about-stat-label small {
+    font-size: 9px;
+  }
+
+
+  /* =====================================================
+     SMALL STATS
+  ===================================================== */
+
+  .about-stat-small-wrapper {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 12px;
+  }
+
+
+  .about-stat-small {
+    height: 65px;
+
+    padding: 0 14px;
+
+    border-radius: 7px;
+  }
+
+
+  .about-stat-small strong {
+    font-size: 26px;
+  }
+
+
+  /* =====================================================
+     PARTNERS HEADING
+  ===================================================== */
+
+  .about-key-partners-heading {
+    margin-top: 45px;
+
+    margin-bottom: 23px;
+  }
+
+
+  .about-key-partners-heading h2 {
+    font-size: 21px;
+
+    line-height: 1.15;
+  }
+
+
+  /* =====================================================
+     MARQUEE
+  ===================================================== */
+
+  .about-key-marquee {
+    width: calc(100% + 40px);
+
+    margin-left: -20px;
+  }
+
+
+  .about-key-marquee-row {
+    width: 100%;
+
+    margin-left: 0;
+
+    margin-bottom: 10px;
+  }
+
+
+  .about-key-track {
+    gap: 10px;
+  }
+
+
+  .about-key-logo {
+    flex-basis: 145px;
+
+    width: 145px;
+
+    height: 68px;
+  }
+
+
+  .about-key-logo img {
+    padding: 8px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   320px - 400px
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .about-key {
+    padding: 30px 16px 42px;
+  }
+
+
+  /* =====================================================
+     TOP CONTENT
+  ===================================================== */
+
+  .about-key-top {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+
+  /* =====================================================
+     INTRO
+  ===================================================== */
+
+  .about-key-intro {
+    padding-top: 0;
+  }
+
+
+  .about-key-badge {
+    min-height: 20px;
+
+    padding: 0 7px;
+
+    font-size: 8px;
+
+    letter-spacing: 0.15px;
+  }
+
+
+  .about-key-intro h2 {
+    margin: 14px 0 12px;
+
+    font-size: 35px;
+
+    line-height: 0.95;
+
+    letter-spacing: -1px;
+  }
+
+
+  .about-key-intro p {
+    width: 100%;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+  }
+
+
+  /* =====================================================
+     BIG STAT
+  ===================================================== */
+
+  .about-stat-big {
+    height: 82px;
+
+    padding: 0 16px;
+  }
+
+
+  .about-stat-big strong {
+    font-size: 36px;
+
+    letter-spacing: -0.8px;
+  }
+
+
+  .about-stat-label {
+    min-width: 58px;
+  }
+
+
+  .about-stat-label span {
+    font-size: 8px;
+  }
+
+
+  .about-stat-label small {
+    font-size: 8px;
+
+    margin-top: 2px;
+  }
+
+
+  /* =====================================================
+     SMALL STATS
+  ===================================================== */
+
+  .about-stat-small-wrapper {
+    gap: 8px;
+
+    margin-top: 10px;
+  }
+
+
+  .about-stat-small {
+    height: 61px;
+
+    padding: 0 11px;
+  }
+
+
+  .about-stat-small strong {
+    font-size: 23px;
+  }
+
+
+  .about-stat-small .about-stat-label {
+    min-width: auto;
+  }
+
+
+  .about-stat-small .about-stat-label span,
+  .about-stat-small .about-stat-label small {
+    font-size: 7px;
+  }
+
+
+  /* =====================================================
+     PARTNERS HEADING
+  ===================================================== */
+
+  .about-key-partners-heading {
+    margin-top: 40px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .about-key-partners-heading h2 {
+    font-size: 18px;
+
+    line-height: 1.2;
+  }
+
+
+  /* =====================================================
+     MARQUEE
+  ===================================================== */
+
+  .about-key-marquee {
+    width: calc(100% + 32px);
+
+    margin-left: -16px;
+  }
+
+
+  .about-key-marquee-row {
+    width: 100%;
+
+    margin-left: 0;
+
+    margin-bottom: 8px;
+  }
+
+
+  .about-key-track {
+    gap: 8px;
+  }
+
+
+  .about-key-logo {
+    flex-basis: 135px;
+
+    width: 135px;
+
+    height: 63px;
+  }
+
+
+  .about-key-logo img {
+    padding: 7px;
+  }
+
+}
+
+
+/* =====================================================
+   EXTRA SMALL DEVICES
+   320px and below
+===================================================== */
+
+@media (max-width: 320px) {
+
+  .about-key {
+    padding-left: 12px;
+
+    padding-right: 12px;
+  }
+
+
+  .about-key-intro h2 {
+    font-size: 32px;
+  }
+
+
+  .about-stat-big {
+    padding: 0 13px;
+  }
+
+
+  .about-stat-big strong {
+    font-size: 33px;
+  }
+
+
+  .about-stat-small {
+    padding: 0 9px;
+  }
+
+
+  .about-stat-small strong {
+    font-size: 21px;
+  }
+
+
+  .about-key-partners-heading h2 {
+    font-size: 17px;
+  }
+
+
+  .about-key-marquee {
+    width: calc(100% + 24px);
+
+    margin-left: -12px;
+  }
+
+
+  .about-key-logo {
+    flex-basis: 125px;
+
+    width: 125px;
+
+    height: 59px;
+  }
+
+}

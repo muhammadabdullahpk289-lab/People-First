@@ -1,0 +1,517 @@
+  /* =====================================================
+    GROW WHO SECTION
+  ===================================================== */
+
+  .growwho-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    padding: 100px 60px 70px;
+
+    background: #eefafa;
+
+    overflow: hidden;
+
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+  /* =====================================================
+    CONTAINER
+  ===================================================== */
+
+  .growwho-container {
+    width: 100%;
+    max-width: 780px;
+
+    margin: 0 auto;
+  }
+
+
+  /* =====================================================
+    HEADING
+  ===================================================== */
+
+  .growwho-title {
+    margin: 0;
+
+    text-align: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 45px;
+    line-height: 1;
+    font-weight: 700;
+
+    letter-spacing: -1.5px;
+
+    color: #050505;
+  }
+
+
+  /* =====================================================
+    CARDS WRAPPER
+  ===================================================== */
+
+  .growwho-cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 50px;
+
+    margin-top: 70px;
+
+    align-items: start;
+  }
+
+
+  /* =====================================================
+    CARD
+  ===================================================== */
+
+  .growwho-card {
+    width: 120%;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    box-shadow:
+      0 12px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+      transform 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+
+  /* =====================================================
+    CARD HOVER
+  ===================================================== */
+
+  .growwho-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+      0 18px 30px rgba(0, 0, 0, 0.12);
+  }
+
+
+  /* =====================================================
+    TOP LETTER AREA
+  ===================================================== */
+
+  .growwho-letter-box {
+    width: 100%;
+
+    height: 176px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background: var(--card-color);
+  }
+
+
+  /* =====================================================
+    BIG LETTER
+  ===================================================== */
+
+  .growwho-letter {
+    display: block;
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 96px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    transition:
+      transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+
+  /* =====================================================
+    LETTER HOVER
+  ===================================================== */
+
+  .growwho-card:hover .growwho-letter {
+    transform: scale(1.16);
+  }
+
+
+  /* =====================================================
+    LOWER CONTENT
+  ===================================================== */
+
+  .growwho-content {
+    min-height: 184px;
+
+    padding: 30px 15px 25px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: var(--light-color);
+  }
+
+
+  /* =====================================================
+    NUMBER
+  ===================================================== */
+
+  .growwho-number {
+    margin-bottom: 27px;
+
+    color: var(--card-color);
+
+    font-size: 18px;
+
+    line-height: 1;
+
+    font-weight: 700;
+  }
+
+
+  /* =====================================================
+    TEXT
+  ===================================================== */
+
+  .growwho-text {
+    margin: 0;
+
+    color: #000000;
+
+    font-size: 15px;
+
+    line-height: 1.38;
+
+    font-weight: 400;
+  }
+
+
+  /* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .growwho-section {
+    padding: 80px 35px 60px;
+  }
+
+  .growwho-container {
+    max-width: 700px;
+  }
+
+  .growwho-title {
+    font-size: 40px;
+  }
+
+  .growwho-cards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 55px;
+  }
+
+  /* IMPORTANT:
+     Desktop width 120% is reset here
+  */
+  .growwho-card {
+    width: 100%;
+  }
+
+  .growwho-letter-box {
+    height: 155px;
+  }
+
+  .growwho-letter {
+    font-size: 80px;
+  }
+
+  .growwho-content {
+    min-height: 180px;
+    padding: 27px 10px 22px;
+  }
+
+  .growwho-number {
+    margin-bottom: 22px;
+    font-size: 17px;
+  }
+
+  .growwho-text {
+    font-size: 13px;
+    line-height: 1.38;
+  }
+}
+
+
+/* =====================================================
+   TABLET / LARGE MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .growwho-section {
+    padding: 70px 28px 55px;
+  }
+
+  .growwho-container {
+    max-width: 100%;
+  }
+
+  .growwho-title {
+    font-size: 36px;
+    line-height: 1.05;
+    letter-spacing: -1px;
+  }
+
+  .growwho-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 45px;
+  }
+
+  .growwho-card {
+    width: 100%;
+  }
+
+  .growwho-letter-box {
+    height: 150px;
+  }
+
+  .growwho-letter {
+    font-size: 78px;
+  }
+
+  .growwho-content {
+    min-height: 170px;
+    padding: 26px 12px 22px;
+  }
+
+  .growwho-number {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .growwho-text {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+  .growwho-section {
+    padding: 65px 20px 50px;
+  }
+
+  .growwho-title {
+    font-size: 32px;
+    line-height: 1.05;
+    letter-spacing: -0.8px;
+  }
+
+  .growwho-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 45px;
+  }
+
+  .growwho-card {
+    width: 100%;
+    border-radius: 18px;
+  }
+
+  .growwho-letter-box {
+    height: 145px;
+  }
+
+  .growwho-letter {
+    font-size: 78px;
+  }
+
+  .growwho-content {
+    min-height: 165px;
+    padding: 25px 10px 20px;
+  }
+
+  .growwho-number {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .growwho-text {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .growwho-section {
+    padding: 55px 16px 45px;
+  }
+
+  .growwho-title {
+    font-size: 29px;
+  }
+
+  .growwho-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 38px;
+  }
+
+  .growwho-card {
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  .growwho-letter-box {
+    height: 135px;
+  }
+
+  .growwho-letter {
+    font-size: 70px;
+  }
+
+  .growwho-content {
+    min-height: 160px;
+    padding: 23px 8px 18px;
+  }
+
+  .growwho-number {
+    margin-bottom: 18px;
+    font-size: 15px;
+  }
+
+  .growwho-text {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+}
+
+
+/* =====================================================
+   EXTRA SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .growwho-section {
+    padding: 50px 15px 40px;
+  }
+
+  .growwho-title {
+    font-size: 27px;
+  }
+
+  .growwho-cards {
+    gap: 12px;
+    margin-top: 35px;
+  }
+
+  .growwho-card {
+    width: 100%;
+    border-radius: 14px;
+  }
+
+  .growwho-letter-box {
+    height: 125px;
+  }
+
+  .growwho-letter {
+    font-size: 65px;
+  }
+
+  .growwho-content {
+    min-height: 155px;
+    padding: 22px 7px 17px;
+  }
+
+  .growwho-number {
+    margin-bottom: 17px;
+    font-size: 14px;
+  }
+
+  .growwho-text {
+    font-size: 12px;
+    line-height: 1.32;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .growwho-section {
+    padding: 45px 12px 35px;
+  }
+
+  .growwho-title {
+    font-size: 24px;
+    letter-spacing: -0.5px;
+  }
+
+  .growwho-cards {
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .growwho-card {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .growwho-letter-box {
+    height: 115px;
+  }
+
+  .growwho-letter {
+    font-size: 58px;
+  }
+
+  .growwho-content {
+    min-height: 145px;
+    padding: 20px 6px 15px;
+  }
+
+  .growwho-number {
+    margin-bottom: 15px;
+    font-size: 13px;
+  }
+
+  .growwho-text {
+    font-size: 11px;
+    line-height: 1.3;
+  }
+}

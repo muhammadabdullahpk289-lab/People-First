@@ -1,0 +1,271 @@
+/* =========================================================
+   THE STORY SECTION
+========================================================= */
+
+.story {
+  position: sticky;
+  z-index: 15;
+  width: 100%;
+  overflow: hidden;
+  padding: 70px 90px;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+/* ---------- Decorative blobs ---------- */
+.st-blob {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+.st-blob-left {
+  top: -40px;
+  left: -60px;
+  width: 560px;
+}
+.st-blob-right {
+  bottom: -60px;
+  right: -60px;
+  width: 520px;
+}
+
+/* ---------- Decorative crystal shapes ---------- */
+.st-shape {
+  position: absolute;
+  z-index: 2;
+  width: 90px;
+  pointer-events: none;
+}
+.st-shape-left {
+  top: 150px;
+  left: 30px;
+}
+.st-shape-right {
+  top: 60px;
+  right: 60px;
+  transform: scaleX(-1);
+}
+
+/* ---------- Inner layout ---------- */
+.st-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ---------- Left column ---------- */
+.st-left {
+  flex: 0 0 48%;
+  max-width: 48%;
+}
+
+.st-title {
+  font-size: 34px;
+  font-weight: 800;
+  color: #16192c;
+  margin: 0 0 6px;
+}
+
+.st-subtitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #16192c;
+  margin: 0 0 22px;
+}
+
+.st-quote-box {
+  position: relative;
+  background: #e8f2fc;
+  border-radius: 10px;
+  padding: 18px 22px 18px 46px;
+  margin-bottom: 24px;
+}
+.st-quote-mark {
+  position: absolute;
+  top: 8px;
+  left: 14px;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 800;
+  color: #4b1f8e;
+}
+.st-quote-box p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #163a6b;
+  line-height: 1.5;
+}
+
+.st-paragraph {
+  font-size: 15px;
+  color: #2d3142;
+  line-height: 1.75;
+  margin: 0 0 22px;
+}
+.st-paragraph strong {
+  color: #4b1f8e;
+}
+
+/* List */
+.st-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.st-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #2d3142;
+}
+.st-list-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: #6a4fa8;
+}
+.st-list strong {
+  color: #4b1f8e;
+}
+
+.st-closing {
+  font-size: 15px;
+  color: #2d3142;
+  line-height: 1.7;
+  margin: 0;
+}
+.st-closing strong {
+  color: #4b1f8e;
+}
+
+/* ---------- Right column ---------- */
+.st-right {
+  position: relative;
+  flex: 0 0 46%;
+  max-width: 46%;
+  display: flex;
+  justify-content: center;
+}
+
+.st-photo-wrap {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+.st-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlapping conclusion circle */
+.st-conclusion {
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  width: 78%;
+  max-width: 330px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #2f8fd6;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 26px 28px;
+  box-sizing: border-box;
+}
+
+.st-conclusion-logo {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  object-fit: contain;
+  background-color: #027399;
+  margin-bottom: 10px;
+}
+
+.st-conclusion-title {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #4b1f8e;
+  margin: 0 0 8px;
+  line-height: 1.35;
+}
+
+.st-conclusion-sub {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #16192c;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.st-conclusion-text {
+  font-size: 11.5px;
+  color: #1f7a6c;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.st-conclusion-mark {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1f7a6c;
+  line-height: 1;
+  margin-top: 8px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .story {
+    padding: 60px 30px;
+  }
+  .st-inner {
+    flex-direction: column;
+  }
+  .st-left,
+  .st-right {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .st-right {
+    margin-top: 80px;
+  }
+  .st-shape,
+  .st-blob {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .st-title {
+    font-size: 26px;
+  }
+  .st-photo-wrap {
+    max-width: 300px;
+  }
+  .st-conclusion {
+    max-width: 240px;
+    padding: 20px;
+    bottom: -30px;
+  }
+}

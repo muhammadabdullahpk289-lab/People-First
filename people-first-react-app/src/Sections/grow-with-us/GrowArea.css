@@ -1,0 +1,384 @@
+/* =====================================================
+   GROW AREA SECTION
+===================================================== */
+
+.growarea-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+
+  padding: 72px 60px 30px;
+
+  background: #e9f8f7;
+
+  overflow: hidden;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================================
+   TOP LEFT LOGO
+===================================================== */
+
+.growarea-logo {
+  position: absolute;
+
+  top: 42px;
+  left: 56px;
+
+  width: 48px;
+  height: auto;
+
+  object-fit: contain;
+
+  z-index: 2;
+
+   animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px); 
+  }
+  100% {
+    transform: translateY(0px); 
+  }
+}
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.growarea-heading {
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 42px;
+  line-height: 1.1;
+
+  font-weight: 650;
+
+  letter-spacing: -0.8px;
+
+  color: #080808;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+
+}
+
+
+/* =====================================================
+   CARDS WRAPPER
+===================================================== */
+
+.growarea-cards {
+  width: 100%;
+  max-width: 1080px;
+
+  margin: 58px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+
+  column-gap: 22px;
+  row-gap: 22px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   COMMON CARD
+===================================================== */
+
+.growarea-card {
+  position: relative;
+
+  min-height: 198px;
+
+  padding: 35px 25px 25px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  /* IMPORTANT */
+  overflow: visible;
+
+  box-shadow:
+    0 12px 30px rgba(65, 137, 140, 0.10);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* =====================================================
+   CARD POSITIONS
+===================================================== */
+
+/* Row 1 */
+
+.growarea-card-1 {
+  grid-column: 1 / span 2;
+}
+
+.growarea-card-2 {
+  grid-column: 3 / span 2;
+}
+
+.growarea-card-3 {
+  grid-column: 5 / span 2;
+}
+
+
+/* Row 2 */
+
+.growarea-card-4 {
+  grid-column: 2 / span 2;
+}
+
+.growarea-card-5 {
+  grid-column: 4 / span 2;
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.growarea-card-content {
+  position: relative;
+
+  z-index: 2;
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
+.growarea-card-title {
+  margin: 0;
+
+  max-width: 250px;
+
+  font-size: 19px;
+
+  line-height: 1.22;
+
+  font-weight: 700;
+
+  letter-spacing: -0.2px;
+
+  color: #111111;
+}
+
+
+/* =====================================================
+   CARD DESCRIPTION
+===================================================== */
+
+.growarea-card-description {
+  margin: 45px 0 0;
+
+  font-size: 14px;
+
+  line-height: 1.55;
+
+  font-weight: 400;
+
+  color: #303030;
+}
+
+
+/* =====================================================
+   IMAGE WRAPPER
+===================================================== */
+
+.growarea-image-wrapper {
+  position: absolute;
+
+  top: -18px;
+  right: -18px;
+
+  width: 110px;
+  height: 110px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 3;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CARD IMAGE
+===================================================== */
+
+.growarea-card-image {
+  width: 95px;
+  height: 95px;
+
+  object-fit: contain;
+
+  transform: scale(1);
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =====================================================
+   HOVER — IMAGE GROWS
+===================================================== */
+
+.growarea-card:hover .growarea-card-image {
+  transform: scale(1.15);
+}
+
+
+/* =====================================================
+   THIRD IMAGE — 180 DEGREE ROTATION
+===================================================== */
+
+.growarea-card-3:hover .growarea-card-image {
+  transform: scale(1.15) rotatey(180deg);
+}
+
+
+/* =====================================================
+   CARD HOVER
+===================================================== */
+
+.growarea-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 18px 38px rgba(65, 137, 140, 0.16);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .growarea-section {
+    padding: 65px 30px 40px;
+  }
+
+  .growarea-logo {
+    left: 30px;
+  }
+
+  .growarea-cards {
+    grid-template-columns: repeat(2, 1fr);
+
+    margin-top: 45px;
+  }
+
+  .growarea-card-1,
+  .growarea-card-2,
+  .growarea-card-3,
+  .growarea-card-4,
+  .growarea-card-5 {
+    grid-column: auto;
+  }
+
+  .growarea-card {
+    min-height: 200px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .growarea-section {
+    min-height: auto;
+
+    padding: 70px 18px 45px;
+  }
+
+  .growarea-logo {
+    top: 25px;
+    left: 20px;
+
+    width: 38px;
+  }
+
+  .growarea-heading {
+    font-size: 27px;
+  }
+
+  .growarea-cards {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin-top: 38px;
+  }
+
+  .growarea-card {
+    width: 100%;
+
+    min-height: 190px;
+
+    padding: 30px 22px 22px;
+
+    border-radius: 17px;
+  }
+
+  .growarea-card-title {
+    font-size: 18px;
+  }
+
+  .growarea-card-description {
+    font-size: 13px;
+
+    margin-top: 40px;
+  }
+
+  .growarea-image-wrapper {
+    width: 90px;
+    height: 90px;
+
+    top: 0;
+    right: 5px;
+  }
+
+  .growarea-card-image {
+    width: 80px;
+    height: 80px;
+  }
+
+}

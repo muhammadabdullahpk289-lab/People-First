@@ -1,0 +1,847 @@
+/* =========================================================
+   FIRST / HERO SECTION
+   STAYS BEHIND WHILE NEXT SECTION SCROLLS OVER IT
+========================================================= */
+
+.ideas-hero {
+  position: sticky;
+  top: 0;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: #ffffff;
+
+  padding: 40px 60px 60px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  z-index: 1;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 25px rgba(23, 211, 214, 0.35),
+    0 0 35px rgba(55, 205, 207, 0.35);
+
+  border-radius: 0;
+}
+
+
+/* =========================================================
+   HEADER / LOGO
+========================================================= */
+
+.ideas-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  position: relative;
+  z-index: 3;
+}
+
+.ideas-header img {
+  width: 250px;
+  height: auto;
+  display: block;
+}
+
+.brand-text {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1e2a4a;
+}
+
+.brand-text span {
+  color: #2dd4bf;
+}
+
+
+/* =========================================================
+   WAVES
+========================================================= */
+
+.hero-waves {
+  position: absolute;
+
+  top: 90px;
+  left: 0;
+
+  width: 100%;
+  height: 220px;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   FLOATING SHAPES
+========================================================= */
+
+.float-shape {
+  position: absolute;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+.shape-red {
+  width: 32px;
+
+  top: 160px;
+  left: 100px;
+
+  animation: floatShape 4.5s ease-in-out infinite;
+}
+
+.shape-purple {
+  width: 28px;
+
+  top: 235px;
+  left: 52%;
+
+  animation: floatShape 5.5s ease-in-out infinite;
+
+  animation-delay: 0.6s;
+}
+
+
+/* =========================================================
+   FLOAT ANIMATION
+========================================================= */
+
+@keyframes floatShape {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .float-shape {
+    animation: none;
+  }
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.ideas-content {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 2fr;
+
+  align-items: center;
+
+  gap: 40px;
+
+  margin-top: 210px;
+}
+
+
+/* =========================================================
+   VISUAL / MAGNET
+========================================================= */
+
+.ideas-visual {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 180px;
+
+  margin-left: -260px;
+}
+
+.magnet-img {
+  width: 75%;
+  max-width: 120px;
+
+  object-fit: contain;
+
+  animation: floatShape 5.5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.ideas-text {
+  position: relative;
+  z-index: 3;
+}
+
+.ideas-text h1 {
+  font-size: 40px;
+
+  font-weight: 900;
+
+  color: #4a1450;
+
+  line-height: 1.2;
+
+  margin-top: 0;
+  margin-bottom: 22px;
+
+  margin-left: -240px;
+
+  max-width: 680px;
+}
+
+.ideas-text p {
+  font-size: 16.5px;
+
+  line-height: 1.75;
+
+  font-weight: 500;
+
+  color: #754c7f;
+
+  max-width: 600px;
+
+  margin-top: 0;
+
+  margin-left: -240px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.ideas-actions {
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: -10px;
+}
+
+.btn {
+  border: none;
+
+  padding: 14px 26px;
+
+  font-size: 14.5px;
+
+  font-weight: 600;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.btn-primary {
+  background: #86123a;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #6f0f30;
+}
+
+.btn-secondary {
+  background: #e7e7ea;
+  color: #333333;
+}
+
+.btn-secondary:hover {
+  background: #dcdce0;
+}
+
+.btn-icon {
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+
+  border: 1px solid #d8b7c4;
+
+  background: #ffffff;
+
+  color: #86123a;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.btn-icon:hover {
+  background: #86123a;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+   1200px - 993px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .ideas-hero {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .ideas-content {
+    grid-template-columns: 0.7fr 2fr;
+    gap: 20px;
+  }
+
+  .ideas-visual {
+    margin-left: -150px;
+  }
+
+  .ideas-text h1,
+  .ideas-text p {
+    margin-left: -150px;
+  }
+
+  .ideas-text h1 {
+    font-size: 36px;
+  }
+
+  .ideas-text p {
+    font-size: 15.5px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   992px
+========================================================= */
+
+@media (max-width: 992px) {
+
+  .ideas-hero {
+    min-height: 100svh;
+
+    padding: 30px 30px 50px;
+  }
+
+
+  /* HEADER */
+
+  .ideas-header {
+    justify-content: center;
+  }
+
+  .ideas-header img {
+    width: 220px;
+  }
+
+
+  /* WAVES */
+
+  .hero-waves {
+    top: 90px;
+    height: 190px;
+  }
+
+
+  /* SHAPES */
+
+  .shape-red {
+    width: 27px;
+
+    top: 145px;
+    left: 60px;
+  }
+
+  .shape-purple {
+    width: 25px;
+
+    top: 200px;
+    left: 70%;
+  }
+
+
+  /* CONTENT */
+
+  .ideas-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 190px;
+
+    text-align: center;
+  }
+
+
+  /* VISUAL */
+
+  .ideas-visual {
+    width: 100%;
+
+    min-height: 120px;
+
+    margin-left: 0;
+
+    justify-content: center;
+  }
+
+  .magnet-img {
+    width: 90px;
+    max-width: 90px;
+  }
+
+
+  /* TEXT */
+
+  .ideas-text {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .ideas-text h1 {
+    max-width: 700px;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    margin-bottom: 18px;
+
+    font-size: 34px;
+
+    line-height: 1.2;
+  }
+
+  .ideas-text p {
+    max-width: 650px;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+  }
+
+
+  /* BUTTONS */
+
+  .ideas-actions {
+    justify-content: center;
+
+    margin-top: 10px;
+
+    flex-wrap: wrap;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+   768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .ideas-hero {
+    padding: 25px 25px 45px;
+
+    min-height: 100svh;
+  }
+
+
+  /* HEADER */
+
+  .ideas-header img {
+    width: 190px;
+  }
+
+  .brand-text {
+    font-size: 19px;
+  }
+
+
+  /* WAVES */
+
+  .hero-waves {
+    top: 75px;
+
+    height: 170px;
+  }
+
+
+  /* FLOATING SHAPES */
+
+  .shape-red {
+    width: 23px;
+
+    top: 130px;
+    left: 35px;
+  }
+
+  .shape-purple {
+    width: 22px;
+
+    top: 175px;
+    left: 75%;
+  }
+
+
+  /* CONTENT */
+
+  .ideas-content {
+    margin-top: 155px;
+
+    gap: 20px;
+  }
+
+
+  .ideas-visual {
+    min-height: 100px;
+  }
+
+  .magnet-img {
+    width: 80px;
+    max-width: 80px;
+  }
+
+
+  /* TEXT */
+
+  .ideas-text h1 {
+    font-size: 30px;
+
+    max-width: 600px;
+
+    margin-bottom: 16px;
+  }
+
+  .ideas-text p {
+    font-size: 14px;
+
+    max-width: 550px;
+
+    line-height: 1.6;
+  }
+
+
+  /* BUTTONS */
+
+  .ideas-actions {
+    gap: 10px;
+
+    margin-top: 5px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+
+    font-size: 13px;
+  }
+
+  .btn-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   560px
+========================================================= */
+
+@media (max-width: 560px) {
+
+  .ideas-hero {
+    padding: 20px 20px 40px;
+
+    min-height: 100svh;
+  }
+
+
+  /* HEADER */
+
+  .ideas-header {
+    justify-content: flex-start;
+  }
+
+  .ideas-header img {
+    width: 165px;
+  }
+
+  .brand-text {
+    display: none;
+  }
+
+
+  /* WAVES */
+
+  .hero-waves {
+    top: 65px;
+
+    height: 145px;
+
+    width: 120%;
+    left: -10%;
+  }
+
+
+  /* SHAPES */
+
+  .shape-red {
+    width: 20px;
+
+    top: 115px;
+    left: 25px;
+  }
+
+  .shape-purple {
+    width: 19px;
+
+    top: 150px;
+    left: auto;
+    right: 35px;
+  }
+
+
+  /* MAIN CONTENT */
+
+  .ideas-content {
+    margin-top: 130px;
+
+    gap: 18px;
+
+    width: 100%;
+  }
+
+
+  /* MAGNET */
+
+  .ideas-visual {
+    min-height: 85px;
+
+    width: 100%;
+  }
+
+  .magnet-img {
+    width: 70px;
+    max-width: 70px;
+  }
+
+
+  /* TEXT */
+
+  .ideas-text {
+    width: 100%;
+
+    padding: 0 5px;
+  }
+
+  .ideas-text h1 {
+    font-size: 26px;
+
+    line-height: 1.2;
+
+    margin: 0 0 14px 0;
+
+    max-width: 100%;
+  }
+
+  .ideas-text p {
+    font-size: 13.5px;
+
+    line-height: 1.55;
+
+    margin: 0;
+
+    max-width: 100%;
+  }
+
+
+  /* BUTTONS */
+
+  .ideas-actions {
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 8px;
+  }
+
+  .btn {
+    padding: 11px 17px;
+
+    font-size: 12.5px;
+  }
+
+  .btn-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .ideas-hero {
+    padding: 18px 16px 35px;
+  }
+
+
+  .ideas-header img {
+    width: 145px;
+  }
+
+
+  .ideas-content {
+    margin-top: 115px;
+
+    gap: 15px;
+  }
+
+
+  .ideas-visual {
+    min-height: 75px;
+  }
+
+  .magnet-img {
+    width: 62px;
+    max-width: 62px;
+  }
+
+
+  .ideas-text h1 {
+    font-size: 23px;
+
+    line-height: 1.2;
+  }
+
+  .ideas-text p {
+    font-size: 12.5px;
+
+    line-height: 1.5;
+  }
+
+
+  .ideas-actions {
+    gap: 6px;
+  }
+
+  .btn {
+    padding: 10px 14px;
+
+    font-size: 11.5px;
+  }
+
+  .btn-icon {
+    width: 37px;
+    height: 37px;
+  }
+
+
+  .shape-red {
+    width: 17px;
+
+    top: 100px;
+    left: 20px;
+  }
+
+  .shape-purple {
+    width: 17px;
+
+    top: 140px;
+    right: 22px;
+  }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+   350px
+========================================================= */
+
+@media (max-width: 350px) {
+
+  .ideas-header img {
+    width: 130px;
+  }
+
+
+  .ideas-content {
+    margin-top: 105px;
+  }
+
+
+  .ideas-text h1 {
+    font-size: 21px;
+  }
+
+  .ideas-text p {
+    font-size: 12px;
+  }
+
+
+  .btn {
+    padding: 9px 12px;
+
+    font-size: 11px;
+  }
+
+}

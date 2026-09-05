@@ -1,0 +1,824 @@
+    /* =====================================================
+    GROW HERO MAIN WRAPPER
+    ===================================================== */
+
+    .growhero {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+    width: 100%;
+
+    overflow-x: hidden;
+    }
+
+
+    /* =====================================================
+    HERO SECTION
+    ===================================================== */
+
+    .growhero-section {
+    width: 100%;
+
+    background: linear-gradient(
+        135deg,
+        #eaf7fa 0%,
+        #eef9fb 45%,
+        #f5fcfd 100%
+    );
+
+
+    padding: 48px 64px;
+
+    box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+    LOGO
+    ===================================================== */
+
+    .growhero-logo {
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 40px;
+    }
+
+
+    .growhero-logo-img {
+    width: 214px;
+
+    height: 54px;
+
+    display: block;
+
+    margin-left: 60px;
+    }
+
+
+    /* =====================================================
+    HERO CONTENT
+    ===================================================== */
+
+    .growhero-content {
+    display: flex;
+
+    align-items: center;
+
+    gap: 48px;
+
+    flex-wrap: nowrap;
+    }
+
+
+    /* =====================================================
+    MICROPHONE
+    ===================================================== */
+
+    .growhero-mic-wrap {
+    flex: 0 0 130px;
+    width: 130px;
+    }
+
+
+    .growhero-mic-img {
+    width: 300px;
+    height: 250px;
+    display: block;
+    margin-left: -20px;
+    margin-top: 50px;
+    animation:
+        growheroMicFloat
+        2s ease-in-out infinite alternate;
+
+    transform-origin: center center;
+    }
+
+
+    /* =====================================================
+    MIC ANIMATION
+    ===================================================== */
+
+    @keyframes growheroMicFloat {
+
+    0% {
+        transform:
+        translateY(0px)
+    }
+
+    100% {
+        transform:
+        translateY(-8px)
+    }
+
+    }
+
+
+    /* =====================================================
+    HERO TEXT
+    ===================================================== */
+
+    .growhero-text {
+    flex: 1;
+    min-width: 0;
+    }
+
+
+    .growhero-heading {
+    font-size: clamp(36px, 4vw, 50px);
+    line-height: 1.25;
+    font-weight: 600;
+    color: #004B42;
+    margin: 60px 0 20px;
+    width: 800px;
+    margin-left: 150px;
+    }
+
+
+    .growhero-heading em {
+    font-style: italic;
+    color: #004B42;
+    font-weight: 800;
+    }
+
+
+    .growhero-description {
+    font-size: clamp(16px, 1.5vw, 19px);
+
+    line-height: 1.6;
+
+    font-weight: 600;
+
+    color: #27272A;
+
+    margin: 0;
+
+    max-width: 650px;
+
+    margin-left: 150px;
+    }
+
+    .growhero-description em{
+        font-weight: 800;
+        color: #004B42;
+    }
+
+    /* =====================================================
+    GROW HERO VALUE SECTION
+    ===================================================== */
+
+    .growhero-value-section {
+    width: 100%;
+
+        background: linear-gradient(
+        135deg,
+        #eaf7fa 0%,
+        #eef9fb 45%,
+        #f5fcfd 100%
+    );
+
+
+    padding: 48px 64px 64px;
+
+    box-sizing: border-box;
+    }
+
+
+    .growhero-value-inner {
+    display: flex;
+
+    align-items: center;
+
+    gap: 48px;
+
+    flex-wrap: nowrap;
+    }
+
+
+    /* =====================================================
+    VALUE IMAGE
+    ===================================================== */
+
+    .growhero-value-image {
+    flex: 0 0 450px;
+
+    width: 250px;
+
+    height: 350px;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 16px 32px rgba(40, 20, 60, 0.18);
+    }
+
+
+    .growhero-value-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.2s ease-in;
+    }
+
+
+    .growhero-value-image img:hover {
+    transform: scale(1.02);
+    }
+
+
+    /* =====================================================
+    IMAGE PLACEHOLDER
+    ===================================================== */
+
+    .growhero-value-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e3dcf1;
+    color: #8a7aa5;
+    font-size: 14px;
+    text-align: center;
+    padding: 12px;
+    box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+    VALUE CONTENT
+    ===================================================== */
+
+    .growhero-value-content {
+    flex: 1;
+    min-width: 0;
+    }
+
+
+    .growhero-value-title {
+    font-size: clamp(30px, 3vw, 38px);
+    font-weight: 700;
+    color: #09090B;
+    margin: 0 0 16px;
+    }
+
+
+    .growhero-value-quote {
+    font-size: clamp(15px, 1.4vw, 19px);
+    font-weight: 500;
+    line-height: 1.6;
+    color: #2e2438;
+    margin: 0 0 32px;
+    max-width: 590px;
+    }
+
+
+    /* =====================================================
+    BUTTON ACTIONS
+    ===================================================== */
+
+    .growhero-value-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-top: 70px;
+    }
+
+
+    /* =====================================================
+    BUTTON
+    ===================================================== */
+
+    .growhero-btn {
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        opacity 0.15s ease;
+    }
+
+
+    .growhero-btn:hover {
+    transform: translateY(-1px);
+    }
+
+
+    .growhero-btn:focus-visible {
+    outline: 2px solid #22ADB2;
+
+    outline-offset: 2px;
+    }
+
+
+    /* =====================================================
+    PRIMARY BUTTON
+    ===================================================== */
+
+    .growhero-btn-primary {
+    background: #22ADB2;
+
+    color: #ffffff;
+
+    margin-left: 300px;
+    }
+
+
+    .growhero-btn-primary:hover {
+    opacity: 0.92;
+
+    box-shadow:
+        0 8px 18px rgba(28, 151, 173, 0.418);
+    }
+
+
+    /* =====================================================
+    SECONDARY BUTTON
+    ===================================================== */
+
+    .growhero-btn-secondary {
+    background: #e7e2ee;
+
+    color: #2b1359;
+    }
+
+
+    .growhero-btn-secondary:hover {
+    background: #ddd6e9;
+    }
+
+
+    /* =====================================================
+   LARGE LAPTOP
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .growhero-section {
+    padding: 45px 45px;
+  }
+
+  .growhero-logo-img {
+    margin-left: 35px;
+  }
+
+  .growhero-content {
+    gap: 38px;
+  }
+
+  .growhero-mic-img {
+    margin-left: 35px;
+  }
+
+  .growhero-value-section {
+    padding: 45px 45px 60px;
+  }
+
+  .growhero-value-image {
+    margin-left: 80px;
+  }
+
+  .growhero-btn-primary {
+    margin-left: 150px;
+  }
+}
+
+
+/* =====================================================
+   TABLET / SMALL LAPTOP
+===================================================== */
+
+@media (max-width: 992px) {
+
+  .growhero-section {
+    padding: 40px 35px;
+  }
+
+  .growhero-logo {
+    margin-bottom: 30px;
+  }
+
+  .growhero-logo-img {
+    margin-left: 20px;
+  }
+
+  .growhero-content {
+    gap: 30px;
+  }
+
+  .growhero-mic-wrap {
+    flex-basis: 110px;
+    width: 110px;
+  }
+
+  .growhero-mic-img {
+    width: 78px;
+    height: 160px;
+    margin-left: 20px;
+  }
+
+  .growhero-heading {
+    font-size: 38px;
+
+    /* responsive override */
+    width: auto;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+
+  .growhero-description {
+    font-size: 17px;
+
+    /* responsive override */
+    margin-left: 0;
+    max-width: 650px;
+  }
+
+  .growhero-value-section {
+    padding: 40px 35px 55px;
+  }
+
+  .growhero-value-inner {
+    gap: 35px;
+  }
+
+  .growhero-value-image {
+    width: 230px;
+    height: 280px;
+    flex-basis: 230px;
+    margin-left: 30px;
+  }
+
+  .growhero-value-title {
+    font-size: 34px;
+  }
+
+  .growhero-value-actions {
+    margin-top: 45px;
+  }
+
+  .growhero-btn-primary {
+    margin-left: 50px;
+  }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .growhero-section {
+    padding: 35px 28px;
+  }
+
+  .growhero-logo {
+    margin-bottom: 30px;
+  }
+
+  .growhero-logo-img {
+    margin-left: 0;
+  }
+
+  .growhero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .growhero-mic-wrap {
+    width: 100%;
+    flex: none;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .growhero-mic-img {
+    width: 175px;
+    height: 150px;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .growhero-text {
+    width: 100%;
+  }
+
+  .growhero-heading {
+    font-size: 34px;
+    width: 100%;
+    margin: 20px 0 20px;
+  }
+
+  .growhero-description {
+    font-size: 16px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* =================================================
+     VALUE SECTION
+  ================================================= */
+
+  .growhero-value-section {
+    padding: 38px 28px 50px;
+  }
+
+  .growhero-value-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .growhero-value-image {
+    width: 260px;
+    height: 310px;
+    flex: none;
+    margin-left: 0;
+  }
+
+  .growhero-value-content {
+    width: 100%;
+  }
+
+  .growhero-value-title {
+    font-size: 32px;
+  }
+
+  .growhero-value-quote {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+  }
+
+  .growhero-value-actions {
+    justify-content: center;
+    margin-top: 35px;
+  }
+
+  .growhero-btn-primary {
+    margin-left: 0;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 640px) {
+
+  .growhero-section {
+    padding: 30px 20px;
+  }
+
+  .growhero-logo {
+    margin-bottom: 25px;
+    margin-left: 10px;
+
+    width: auto;
+    height: auto;
+  }
+
+  .growhero-logo-img {
+    width: 178px;
+    height: 48px;
+    margin-left: 0;
+  }
+
+  .growhero-content {
+    gap: 20px;
+  }
+
+  .growhero-mic-img {
+    width: 168px;
+    height: 168px;
+    margin-top: 10px;
+  }
+
+  .growhero-heading {
+    font-size: 29px;
+    line-height: 1.3;
+
+    width: 100%;
+    margin: 10px 0 18px;
+  }
+
+  .growhero-description {
+    font-size: 16px;
+    line-height: 1.55;
+
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
+  /* =================================================
+     VALUE
+  ================================================= */
+
+  .growhero-value-section {
+    padding: 32px 20px 45px;
+  }
+
+  .growhero-value-image {
+    width: min(100%, 260px);
+    height: 290px;
+  }
+
+  .growhero-value-title {
+    font-size: 29px;
+  }
+
+  .growhero-value-quote {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .growhero-value-actions {
+    width: 100%;
+    margin-top: 25px;
+    justify-content: center;
+  }
+
+  .growhero-btn {
+    margin: 0;
+  }
+
+  .growhero-btn-primary {
+    margin-left: 0;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .growhero-section {
+    padding: 25px 16px;
+  }
+
+  .growhero-logo {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .growhero-logo-img {
+    width: 144px;
+    height: 44px;
+  }
+
+  .growhero-content {
+    gap: 15px;
+  }
+
+  .growhero-mic-img {
+    width: 162px;
+    height: 162px;
+  }
+
+  .growhero-heading {
+    font-size: 26px;
+    line-height: 1.3;
+
+    width: 100%;
+    margin: 10px 0 16px;
+  }
+
+  .growhero-description {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+
+  /* =================================================
+     VALUE SECTION
+  ================================================= */
+
+  .growhero-value-section {
+    padding: 28px 16px 40px;
+  }
+
+  .growhero-value-image {
+    width: 100%;
+    max-width: 250px;
+    height: 270px;
+  }
+
+  .growhero-value-title {
+    font-size: 27px;
+  }
+
+  .growhero-value-quote {
+    font-size: 15px;
+  }
+
+  .growhero-value-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .growhero-btn {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .growhero-btn-primary {
+    margin-left: 0;
+  }
+}
+
+
+/* =====================================================
+   EXTRA SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .growhero-section {
+    padding: 22px 14px;
+  }
+
+  .growhero-logo-img {
+    width: 130px;
+    height: auto;
+  }
+
+  .growhero-heading {
+    font-size: 23px;
+    width: 100%;
+  }
+
+  .growhero-description {
+    font-size: 14px;
+  }
+
+  .growhero-mic-img {
+    width: 158px;
+    height: 158px;
+  }
+
+  .growhero-value-section {
+    padding: 25px 14px 35px;
+  }
+
+  .growhero-value-image {
+    width: 100%;
+    max-width: 230px;
+    height: 250px;
+  }
+
+  .growhero-value-title {
+    font-size: 24px;
+  }
+
+  .growhero-value-quote {
+    font-size: 14px;
+  }
+
+  .growhero-value-actions {
+    gap: 10px;
+  }
+
+  .growhero-btn {
+    width: 100%;
+    padding: 11px 18px;
+  }
+}

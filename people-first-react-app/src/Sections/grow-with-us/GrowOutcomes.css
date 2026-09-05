@@ -1,0 +1,488 @@
+/* =====================================================
+   GROW OUTCOMES SECTION
+===================================================== */
+
+.growoutcomes-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+
+  padding: 55px 50px 30px;
+
+  background: #0b7b70;
+
+  overflow: hidden;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.growoutcomes-container {
+  width: 100%;
+  max-width: 1150px;
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.growoutcomes-title {
+  margin: 0;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 45px;
+
+  line-height: 1;
+
+  font-weight: 700;
+
+  letter-spacing: -1px;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.growoutcomes-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  column-gap: 110px;
+  row-gap: 64px;
+
+  margin-top: 100px;
+  margin-left: 80px;
+
+  align-items: center;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.growoutcomes-card {
+  position: relative;
+
+  width: 100%;
+
+  height: 160px;
+
+  display: flex;
+
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.growoutcomes-image {
+  position: absolute;
+
+  left: -65px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 175px;
+
+  height: 175px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 3;
+
+  pointer-events: none;
+}
+
+
+.growoutcomes-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* =====================================================
+   CONTENT BOX
+===================================================== */
+
+.growoutcomes-content {
+  width: 100%;
+
+  height: 160px;
+
+  box-sizing: border-box;
+
+  padding: 25px 28px 25px 115px;
+
+  display: flex;
+
+  align-items: center;
+
+  background: #91bdbc;
+
+  border-radius: 19px;
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.growoutcomes-text {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 18px;
+
+  line-height: 1.4;
+
+  font-weight: 500;
+}
+
+
+.growoutcomes-text strong {
+  font-weight: 800;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.growoutcomes-card {
+  transition: transform 0.3s ease;
+}
+
+
+.growoutcomes-card:hover {
+  transform: translateY(-3px);
+}
+
+
+.growoutcomes-card:hover .growoutcomes-image img {
+  transform: scale(1.04);
+}
+
+
+.growoutcomes-image img {
+  transition: transform 0.3s ease;
+}
+
+
+/* =====================================================
+   LARGE LAPTOP
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .growoutcomes-section {
+    padding: 55px 40px 30px;
+  }
+
+  .growoutcomes-container {
+    max-width: 1050px;
+  }
+
+  .growoutcomes-grid {
+    column-gap: 80px;
+    row-gap: 55px;
+
+    margin-top: 85px;
+  }
+
+  .growoutcomes-image {
+    left: -55px;
+
+    width: 160px;
+    height: 160px;
+  }
+
+  .growoutcomes-content {
+    height: 155px;
+
+    padding-left: 105px;
+  }
+
+  .growoutcomes-text {
+    font-size: 17px;
+  }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+  .growoutcomes-section {
+    padding: 50px 30px 40px;
+  }
+
+  .growoutcomes-title {
+    font-size: 38px;
+  }
+
+  .growoutcomes-grid {
+    column-gap: 65px;
+    row-gap: 45px;
+
+    margin-top: 75px;
+  }
+
+  .growoutcomes-card {
+    height: 145px;
+  }
+
+  .growoutcomes-content {
+    height: 145px;
+
+    padding: 20px 20px 20px 90px;
+
+    border-radius: 17px;
+  }
+
+  .growoutcomes-image {
+    left: -48px;
+
+    width: 135px;
+    height: 135px;
+  }
+
+  .growoutcomes-text {
+    font-size: 15px;
+
+    line-height: 1.35;
+  }
+}
+
+
+/* =====================================================
+   SMALL TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .growoutcomes-section {
+    padding: 50px 25px 45px;
+  }
+
+  .growoutcomes-title {
+    font-size: 34px;
+  }
+
+  .growoutcomes-grid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    margin-top: 65px;
+
+    max-width: 600px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .growoutcomes-card {
+    height: 150px;
+  }
+
+  .growoutcomes-content {
+    height: 150px;
+
+    padding-left: 125px;
+
+    border-radius: 18px;
+  }
+
+  .growoutcomes-image {
+    left: -35px;
+
+    width: 145px;
+    height: 145px;
+  }
+
+  .growoutcomes-text {
+    font-size: 16px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .growoutcomes-section {
+    padding: 45px 20px 40px;
+  }
+
+  .growoutcomes-title {
+    font-size: 30px;
+
+    letter-spacing: -0.5px;
+  }
+
+  .growoutcomes-grid {
+    gap: 35px;
+
+    margin-top: 55px;
+  }
+
+  .growoutcomes-card {
+    height: 135px;
+  }
+
+  .growoutcomes-content {
+    height: 135px;
+
+    padding: 18px 15px 18px 125px;
+
+    border-radius: 16px;
+  }
+
+  .growoutcomes-image {
+    left: -28px;
+
+    width: 125px;
+    height: 125px;
+  }
+
+  .growoutcomes-text {
+    font-size: 14px;
+
+    line-height: 1.35;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .growoutcomes-section {
+    padding: 40px 16px 35px;
+  }
+
+  .growoutcomes-title {
+    font-size: 27px;
+  }
+
+  .growoutcomes-grid {
+    gap: 30px;
+
+    margin-top: 48px;
+  }
+
+  .growoutcomes-card {
+    height: 125px;
+  }
+
+  .growoutcomes-content {
+    height: 125px;
+
+    padding: 15px 12px 15px 108px;
+
+    border-radius: 15px;
+  }
+
+  .growoutcomes-image {
+    left: -23px;
+
+    width: 110px;
+    height: 110px;
+  }
+
+  .growoutcomes-text {
+    font-size: 13px;
+
+    line-height: 1.3;
+  }
+}
+
+
+/* =====================================================
+   EXTRA SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .growoutcomes-section {
+    padding: 35px 12px 30px;
+  }
+
+  .growoutcomes-title {
+    font-size: 24px;
+  }
+
+  .growoutcomes-grid {
+    gap: 25px;
+
+    margin-top: 42px;
+  }
+
+  .growoutcomes-card {
+    height: 115px;
+  }
+
+  .growoutcomes-content {
+    height: 115px;
+
+    padding-left: 90px;
+    padding-right: 8px;
+
+    border-radius: 13px;
+  }
+
+  .growoutcomes-image {
+    left: -20px;
+
+    width: 98px;
+    height: 98px;
+  }
+
+  .growoutcomes-text {
+    font-size: 11.5px;
+
+    line-height: 1.28;
+  }
+}

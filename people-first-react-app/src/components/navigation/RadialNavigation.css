@@ -1,0 +1,173 @@
+.radial-section {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  z-index: 1;
+}
+
+/* ---------- center logo (your svg / image) ---------- */
+.radial-logo {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  width: 24%;
+  height: 42%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.radial-logo img {
+  width: 110%;
+  height: 110%;
+  object-fit: contain;
+  margin-top: 280px;
+  animation: float 5s ease-in-out infinite;
+}
+
+ @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px); /* Moves up 20 pixels */
+      }
+      100% {
+        transform: translateY(0px); /* Returns to original position */
+      }
+    }
+
+/* ---------- nav wrapper: keeps the 1349x632 aspect ratio so % positions always line up ---------- */
+.radial-nav {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1349 / 632;
+}
+
+/* the <Link> itself doesn't need a box — its two children are positioned
+   absolutely against .radial-nav, but the click/hover still applies to
+   the whole link because they're its descendants */
+.radial-item {
+  display: contents;
+}
+
+.radial-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: clamp(9px, 1.3vw, 15px);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #565859;
+  transition: color 0.2s ease; 
+  margin-left: 4px;
+}
+
+.radial-icon {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: clamp(28px, 4.2vw, 46px);
+  height: clamp(28px, 4.2vw, 46px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.radial-item:hover .radial-label {
+  color: white;
+}
+
+.radial-item:hover .radial-icon {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* active-page highlight — only fires if you switch <Link> to <NavLink>
+   (see note below the code) so React Router can add this class itself */
+.radial-item.active .radial-label {
+  color: #2dd4bf;
+}
+
+.radial-item.active .radial-icon {
+  box-shadow: 0 0 0 2px #2dd4bf, 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ================= per-item position + color ================= */
+
+.radial-home .radial-label     { left: 50.6%; top: 3.2%; }
+.radial-home .radial-icon      { left: 50.6%; top: 13.8%;}
+
+.radial-about .radial-label    { left: 38.5%; top: 10.9%; }
+.radial-about .radial-icon     { left: 42.8%; top: 18.2%; }
+
+.radial-podcasts .radial-label { left: 64.4%; top: 10.9%; }
+.radial-podcasts .radial-icon  { left: 58.4%; top: 18.2%; }
+
+.radial-what .radial-label     { left: 29.5%; top: 24.4%; }
+.radial-what .radial-icon      { left: 38.0%; top: 27.8%; }
+
+.radial-grow .radial-label     { left: 72.5%; top: 24.4%; }
+.radial-grow .radial-icon      { left: 63.2%; top: 27.8%; }
+
+.radial-ideas .radial-label    { left: 27.6%; top: 40.7%; }
+.radial-ideas .radial-icon     { left: 35.7%; top: 40.2%; }
+
+.radial-insights .radial-label { left: 76.5%; top: 40.8%; }
+.radial-insights .radial-icon  { left: 65.6%; top: 40.3%; }
+
+/* ---------- small screens: shrink the whole block a touch ---------- */
+@media (max-width: 480px) {
+  .radial-label { display: none; }
+  .radial-icon { box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); margin-top: 100px; transform: translate(-50%, -50%);}
+  .radial-logo img{ width: 220px; height: 220px; margin-top: 500px;}
+   .radial-icon {
+    width: 34px;
+    height: 34px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  }
+ 
+  /* ---- new spread-out positions (icons only) ---- */
+ 
+  .radial-ideas    .radial-icon { left: 22%;  top: 84%; }
+  .radial-what     .radial-icon { left: 25%; top: 55%; }
+  .radial-about    .radial-icon { left: 34%; top: 34%; }
+  .radial-home     .radial-icon { left: 50%; top: 19%; }
+  .radial-podcasts .radial-icon { left: 66%; top: 34%; }
+  .radial-grow     .radial-icon { left: 75%; top: 55%; }
+  .radial-insights .radial-icon { left: 80%; top: 84%; }
+ 
+}
+
+
+/* ---------- very small screens (older/small phones): give the section
+   a touch more height so the labels don't crowd the icons ---------- */
+@media (max-width: 380px) {
+  .radial-nav { aspect-ratio: 1349 / 720; }
+  .radial-label { display: none; }
+  .radial-icon {
+    width: 34px;
+    height: 34px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  }
+ 
+  /* ---- new spread-out positions (icons only) ---- */
+ 
+  .radial-ideas    .radial-icon { left: 22%;  top: 84%; }
+  .radial-what     .radial-icon { left: 25%; top: 55%; }
+  .radial-about    .radial-icon { left: 34%; top: 34%; }
+  .radial-home     .radial-icon { left: 50%; top: 19%; }
+  .radial-podcasts .radial-icon { left: 66%; top: 34%; }
+  .radial-grow     .radial-icon { left: 75%; top: 55%; }
+  .radial-insights .radial-icon { left: 80%; top: 84%; }
+ 
+
+}
