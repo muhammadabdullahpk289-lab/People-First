@@ -29,6 +29,7 @@ export default function App() {
   const hideFooter =
     location.pathname === "/" ||
     location.pathname === "/say-hello";
+    location.pathname === '/ActivePage';
 
 
   return (
