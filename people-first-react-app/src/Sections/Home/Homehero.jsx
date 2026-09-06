@@ -1,5 +1,5 @@
 import React from "react";
-import "./HomeHero.css";
+import "./Homehero.css";
 
 import logo from "../../assets/Home-img/logo.svg";
 import pattern from "../../assets/Home-img/pattern.png";
