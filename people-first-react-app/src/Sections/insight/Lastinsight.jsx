@@ -1,5 +1,5 @@
 import React from "react";
-import "./LastInsight.css";
+import "./Lastinsight.css";
 import img from '../../assets/insight-img/ep-itcn.webp'
 
 /* =====================================================
