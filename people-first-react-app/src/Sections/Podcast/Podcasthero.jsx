@@ -3,7 +3,7 @@ import { MessageCircle } from "lucide-react";
 import logoImg from "../../assets/Podcast-img/logo.svg";
 import micImg from "../../assets/Podcast-img/mic.webp";
 import guestImg from "../../assets/Podcast-img/value-guest.webp";
-import "./PodcastHero.css";
+import "./Podcasthero.css";
 
 export default function PodcastHero({ imageSrc }) {
   return (

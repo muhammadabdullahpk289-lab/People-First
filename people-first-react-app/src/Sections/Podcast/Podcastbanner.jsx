@@ -1,5 +1,5 @@
 import React from "react";
-import "./PodcastBanner.css";
+import "./Podcastbanner.css";
 import banner from '../../assets/Podcast-img/waveform.webp'
 
 export default function PodcastBanner() {

@@ -1,5 +1,5 @@
 import React from "react";
-import "./PodcastAnalytics.css";
+import "./Podcastanalytics.css";
 import analics from '../../assets/Podcast-img/analytics.webp'
 
 export default function PodcastAnalytics() {

@@ -1,5 +1,5 @@
 import React from "react";
-import "./WhatWeDoResults.css";
+import "./Whatwedoresults.css";
 import img1 from '../../assets/what-we-do-img/icon-core.webp'
 import img2 from '../../assets/what-we-do-img/icon-joint.webp'
 import img3 from '../../assets/what-we-do-img/icon-affiliated.webp'

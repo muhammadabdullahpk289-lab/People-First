@@ -1,5 +1,5 @@
 import React from "react";
-import "./TheStory.css";
+import "./Thestory.css";
 import img1 from '../../assets/Home-img/blob3.png'
 import img2 from '../../assets/Home-img/blob4.png'
 import img3 from '../../assets/Home-img/left-plane.png'

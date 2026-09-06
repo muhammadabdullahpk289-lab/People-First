@@ -1,5 +1,5 @@
 import React from "react";
-import "./BrandArchitecturePillars.css";
+import "./BrandArchitecturepillars.css";
 import { Check } from "lucide-react";
 
 // ===============================

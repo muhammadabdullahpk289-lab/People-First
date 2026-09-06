@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./OurPodcasts.css";
+import "./Ourpodcasts.css";
 import img1 from '../../assets/Podcast-img/ep-itcn.webp'
 import img2 from '../../assets/Podcast-img/ep-press.webp'
 import img3 from '../../assets/Podcast-img/ep-5g.webp'
