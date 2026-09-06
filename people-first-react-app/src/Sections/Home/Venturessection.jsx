@@ -1,5 +1,5 @@
 import React from "react";
-import "./VenturesSection.css";
+import "./Venturessection.css";
 import img1 from '../../assets/Home-img/merchanity.webp'
 import img2 from '../../assets/Home-img/insights.webp'
 import img3 from '../../assets/Home-img/abaad.webp'
