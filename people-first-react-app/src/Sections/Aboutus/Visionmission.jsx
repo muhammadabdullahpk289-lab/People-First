@@ -1,5 +1,5 @@
 import React from "react";
-import "./VisionMission.css";
+import "./Visionmission.css";
 import { BookOpen, TrendingUp, Users, Repeat } from "lucide-react";
 
 // ===============================
