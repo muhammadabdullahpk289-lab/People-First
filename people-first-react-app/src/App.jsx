@@ -19,27 +19,24 @@ import Footer from "./components/Footer";
 export default function App() {
   const location = useLocation();
 
-  // SideNavbar sirf in pages par hide hoga
+  // Active Page aur Say Hello par SideNavbar hide
   const hideSideNavbar =
     location.pathname === "/" ||
     location.pathname === "/say-hello";
 
-
-  // Footer bhi sirf in pages par hide hoga
+  // Active Page aur Say Hello par Footer hide
   const hideFooter =
     location.pathname === "/" ||
     location.pathname === "/say-hello";
-    location.pathname === '/ActivePage';
-
 
   return (
     <>
       {/* SIDE NAVBAR */}
       {!hideSideNavbar && <SideNavbar />}
 
-
       {/* PAGES */}
       <Routes>
+        {/* ACTIVE PAGE — MAIN / FRONT PAGE */}
         <Route path="/" element={<ActivePage />} />
 
         <Route path="/home" element={<Home />} />
@@ -54,7 +51,6 @@ export default function App() {
         <Route path="/cookies" element={<Cookies />} />
         <Route path="/say-hello" element={<SayHello />} />
       </Routes>
-
 
       {/* FOOTER */}
       {!hideFooter && <Footer />}
