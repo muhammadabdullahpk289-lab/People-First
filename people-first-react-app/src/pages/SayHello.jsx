@@ -1,23 +1,38 @@
 import { useState } from "react";
+import {
+  FaWhatsapp,
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+} from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export default function SayHello() {
   const [sent, setSent] = useState(false);
 
-  function handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
+
     setSent(true);
-  }
+
+    setTimeout(() => {
+      setSent(false);
+    }, 4000);
+  };
 
   return (
     <>
       <style>{`
-        /* =========================================
-           SAY HELLO / CONTACT SECTION
-        ========================================= */
 
-        .contact-page {
+        /* =====================================================
+           SAY HELLO / CONTACT PAGE
+        ===================================================== */
+
+        .sayhello-page {
           width: 100%;
           min-height: 100vh;
+
           box-sizing: border-box;
 
           display: flex;
@@ -25,66 +40,215 @@ export default function SayHello() {
           justify-content: space-between;
 
           gap: 70px;
-          padding: 50px 70px 50px 34px;
+
+          padding: 25px 20px 27px 30px;
 
           background: #702061;
+
           font-family: Arial, Helvetica, sans-serif;
+
+          overflow: hidden;
         }
 
-        /* =========================================
+
+        /* =====================================================
            LEFT CONTENT
-        ========================================= */
+        ===================================================== */
 
-        .contact-copy {
-          width: 42%;
-          max-width: 470px;
+        .sayhello-left {
+          width: 43%;
+          max-width: 450px;
+
           color: #ffffff;
+
+          flex-shrink: 0;
         }
 
-        .eyebrow {
-          margin-bottom: 12px;
+
+        .sayhello-left h1 {
+          margin: 0 0 8px;
+
+          color: #ffffff;
 
           font-size: 28px;
           font-weight: 800;
-          line-height: 1.1;
 
-          color: #ffffff;
+          line-height: 1.15;
+
           text-transform: uppercase;
         }
 
-        .contact-copy h1 {
-          margin: 0 0 12px;
 
-          font-size: 38px;
-          line-height: 1.15;
-          font-weight: 800;
-
-          color: #ffffff;
-        }
-
-        .contact-copy p {
+        .sayhello-subtitle {
           margin: 0;
 
-          max-width: 420px;
-
-          font-size: 16px;
-          line-height: 1.6;
-          font-weight: 500;
+          max-width: 430px;
 
           color: rgba(255, 255, 255, 0.85);
+
+          font-size: 15px;
+          font-weight: 600;
+
+          line-height: 1.5;
         }
 
-        /* =========================================
-           FORM
-        ========================================= */
 
-        .contact-form {
-          width: 52%;
+        /* =====================================================
+           CONTACT INFORMATION
+        ===================================================== */
+
+        .contact-info {
+          display: flex;
+          align-items: flex-start;
+
+          gap: 15px;
+        }
+
+
+        .phone-info {
+          margin-top: 32px;
+        }
+
+
+        .email-info {
+          margin-top: 25px;
+        }
+
+
+        /* =====================================================
+           CONTACT ICONS
+        ===================================================== */
+
+        .contact-icon {
+          width: 24px;
+          min-width: 24px;
+
+          height: 28px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          font-size: 25px;
+        }
+
+
+        .whatsapp-icon {
+          color: #00e676;
+        }
+
+
+        .email-icon {
+          color: #ffffff;
+
+          font-size: 28px;
+        }
+
+
+        /* =====================================================
+           CONTACT TEXT
+        ===================================================== */
+
+        .contact-details {
+          display: flex;
+          flex-direction: column;
+
+          gap: 8px;
+        }
+
+
+        .contact-details p {
+          margin: 0;
+
+          color: #ffffff;
+
+          font-size: 16px;
+          font-weight: 600;
+
+          line-height: 1.35;
+        }
+
+
+        /* =====================================================
+           SOCIAL ICONS
+        ===================================================== */
+
+        .social-icons {
+          display: flex;
+          align-items: center;
+
+          gap: 35px;
+
+          margin-top: 36px;
+
+          padding-left: 8px;
+        }
+
+
+        .social-icons a {
+          width: 28px;
+          height: 28px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          text-decoration: none;
+
+          font-size: 26px;
+
+          transition:
+            transform 0.2s ease,
+            opacity 0.2s ease;
+        }
+
+
+        .social-icons a:hover {
+          transform: translateY(-3px);
+
+          opacity: 0.8;
+        }
+
+
+        /* FACEBOOK */
+
+        .social-icons a:nth-child(1) {
+          color: #1877f2;
+        }
+
+
+        /* TWITTER */
+
+        .social-icons a:nth-child(2) {
+          color: #1da1f2;
+        }
+
+
+        /* LINKEDIN */
+
+        .social-icons a:nth-child(3) {
+          color: #0077b5;
+        }
+
+
+        /* INSTAGRAM */
+
+        .social-icons a:nth-child(4) {
+          color: #f77737;
+        }
+
+
+        /* =====================================================
+           FORM
+        ===================================================== */
+
+        .sayhello-form {
+          width: 53%;
           max-width: 545px;
 
           box-sizing: border-box;
 
-          padding: 25px 20px 20px;
+          padding: 21px 20px 19px;
 
           background: #eeeeee;
 
@@ -92,34 +256,49 @@ export default function SayHello() {
 
           display: flex;
           flex-direction: column;
-          gap: 11px;
 
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+          gap: 9px;
+
+          box-shadow:
+            0 8px 25px rgba(0, 0, 0, 0.08);
+
+          flex-shrink: 0;
         }
 
-        /* =========================================
-           LABELS
-        ========================================= */
 
-        .contact-form label {
+        /* =====================================================
+           FORM LABEL
+        ===================================================== */
+
+        .sayhello-form label {
+          width: 100%;
+
           display: flex;
           flex-direction: column;
 
-          gap: 6px;
+          gap: 5px;
 
-          font-size: 14px;
+          font-size: 13px;
           font-weight: 600;
 
           color: #333333;
         }
 
-        /* =========================================
-           INPUTS
-        ========================================= */
 
-        .contact-form input,
-        .contact-form textarea {
+        .sayhello-form label span {
+          display: block;
+        }
+
+
+        /* =====================================================
+           INPUT / SELECT / TEXTAREA
+        ===================================================== */
+
+        .sayhello-form input,
+        .sayhello-form select,
+        .sayhello-form textarea {
           width: 100%;
+
           box-sizing: border-box;
 
           border: none;
@@ -129,49 +308,90 @@ export default function SayHello() {
 
           border-radius: 9px;
 
-          padding: 12px 15px;
-
           font-family: Arial, Helvetica, sans-serif;
+
           font-size: 16px;
 
           color: #333333;
 
-          transition: 0.2s ease;
+          transition:
+            box-shadow 0.2s ease,
+            transform 0.2s ease;
         }
 
-        .contact-form input {
-          height: 49px;
+
+        /* INPUT */
+
+        .sayhello-form input {
+          height: 35px;
+
+          padding: 0 15px;
         }
 
-        .contact-form textarea {
-          min-height: 120px;
+
+        /* SELECT */
+
+        .sayhello-form select {
+          height: 35px;
+
+          padding: 0 15px;
+
+          cursor: pointer;
+
+          appearance: auto;
+        }
+
+
+        /* TEXTAREA */
+
+        .sayhello-form textarea {
+          min-height: 72px;
+
+          padding: 12px 15px;
+
           resize: vertical;
         }
 
-        .contact-form input::placeholder,
-        .contact-form textarea::placeholder {
+
+        /* =====================================================
+           PLACEHOLDER
+        ===================================================== */
+
+        .sayhello-form input::placeholder,
+        .sayhello-form textarea::placeholder {
           color: #a3a3ae;
         }
 
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-          box-shadow: 0 0 0 2px rgba(157, 28, 62, 0.2);
+
+        /* =====================================================
+           FOCUS
+        ===================================================== */
+
+        .sayhello-form input:focus,
+        .sayhello-form select:focus,
+        .sayhello-form textarea:focus {
+          box-shadow:
+            0 0 0 2px rgba(157, 28, 62, 0.20);
         }
 
-        /* =========================================
-           BUTTON
-        ========================================= */
 
-        .primary-btn {
+        /* =====================================================
+           SUBMIT BUTTON
+        ===================================================== */
+
+        .sayhello-submit {
           width: 100%;
+
           height: 40px;
 
-          margin-top: 2px;
+          margin-top: 3px;
 
           border: none;
+
           border-radius: 7px;
 
           background: #9d1c3e;
+
           color: #ffffff;
 
           font-size: 16px;
@@ -184,171 +404,632 @@ export default function SayHello() {
             transform 0.2s ease;
         }
 
-        .primary-btn:hover {
+
+        .sayhello-submit:hover {
           background: #851632;
+
           transform: translateY(-1px);
         }
 
-        .primary-btn:active {
+
+        .sayhello-submit:active {
           transform: translateY(0);
         }
 
-        /* =========================================
-           SUCCESS MESSAGE
-        ========================================= */
 
-        .form-success {
-          margin: 3px 0 0;
+        /* =====================================================
+           SUCCESS MESSAGE
+        ===================================================== */
+
+        .sayhello-success {
+          margin: 2px 0 0;
 
           text-align: center;
 
-          font-size: 14px;
-          font-weight: 600;
-
           color: #702061;
+
+          font-size: 13px;
+
+          font-weight: 600;
         }
 
-        /* =========================================
-           TABLET
-        ========================================= */
 
-        @media (max-width: 900px) {
-          .contact-page {
-            gap: 40px;
-            padding: 45px 30px;
+        /* =====================================================
+           LARGE SCREEN
+        ===================================================== */
+
+        @media (min-width: 1200px) {
+
+          .sayhello-page {
+            padding-left: 30px;
+            padding-right: 20px;
+
+            gap: 80px;
           }
 
-          .contact-copy {
-            width: 40%;
-          }
-
-          .contact-copy h1 {
-            font-size: 32px;
-          }
-
-          .contact-form {
-            width: 60%;
-          }
-        }
-
-        /* =========================================
-           MOBILE
-        ========================================= */
-
-        @media (max-width: 700px) {
-          .contact-page {
-            min-height: auto;
-
-            flex-direction: column;
-            align-items: stretch;
-
-            gap: 35px;
-
-            padding: 45px 20px;
-          }
-
-          .contact-copy {
-            width: 100%;
-            max-width: none;
-          }
-
-          .eyebrow {
-            font-size: 24px;
-          }
-
-          .contact-copy h1 {
+          .sayhello-left h1 {
             font-size: 30px;
           }
 
-          .contact-copy p {
+          .sayhello-form {
+            max-width: 545px;
+          }
+
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 950px) {
+
+          .sayhello-page {
+            gap: 40px;
+
+            padding: 40px 25px;
+          }
+
+
+          .sayhello-left {
+            width: 42%;
+          }
+
+
+          .sayhello-form {
+            width: 58%;
+          }
+
+
+          .sayhello-left h1 {
+            font-size: 26px;
+          }
+
+
+          .sayhello-subtitle {
+            font-size: 14px;
+          }
+
+
+          .contact-details p {
             font-size: 15px;
           }
 
-          .contact-form {
+
+          .social-icons {
+            gap: 28px;
+          }
+
+        }
+
+
+        /* =====================================================
+           TABLET SMALL
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+          .sayhello-page {
+            gap: 30px;
+
+            padding: 35px 20px;
+          }
+
+
+          .sayhello-left h1 {
+            font-size: 24px;
+          }
+
+
+          .sayhello-form {
+            padding: 20px 16px 18px;
+
+            border-radius: 24px;
+          }
+
+
+          .sayhello-form input,
+          .sayhello-form select {
+            height: 38px;
+          }
+
+
+          .sayhello-form textarea {
+            min-height: 80px;
+          }
+
+
+          .social-icons {
+            gap: 24px;
+          }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+          .sayhello-page {
+            min-height: auto;
+
+            flex-direction: column;
+
+            align-items: stretch;
+
+            justify-content: flex-start;
+
+            gap: 40px;
+
+            padding: 45px 20px;
+
+            overflow: visible;
+          }
+
+
+          /* LEFT */
+
+          .sayhello-left {
             width: 100%;
+
+            max-width: none;
+          }
+
+
+          .sayhello-left h1 {
+            font-size: 30px;
+
+            margin-bottom: 10px;
+          }
+
+
+          .sayhello-subtitle {
+            max-width: 100%;
+
+            font-size: 15px;
+          }
+
+
+          /* PHONE */
+
+          .phone-info {
+            margin-top: 28px;
+          }
+
+
+          /* EMAIL */
+
+          .email-info {
+            margin-top: 22px;
+          }
+
+
+          .contact-details p {
+            font-size: 15px;
+          }
+
+
+          /* SOCIAL */
+
+          .social-icons {
+            margin-top: 30px;
+
+            padding-left: 5px;
+
+            gap: 30px;
+          }
+
+
+          /* FORM */
+
+          .sayhello-form {
+            width: 100%;
+
             max-width: none;
 
             padding: 22px 16px 18px;
 
             border-radius: 24px;
+
+            gap: 10px;
           }
+
+
+          .sayhello-form input {
+            height: 44px;
+          }
+
+
+          .sayhello-form select {
+            height: 44px;
+          }
+
+
+          .sayhello-form textarea {
+            min-height: 110px;
+          }
+
+
+          .sayhello-submit {
+            height: 42px;
+          }
+
         }
 
-        /* =========================================
+
+        /* =====================================================
            SMALL MOBILE
-        ========================================= */
+        ===================================================== */
 
         @media (max-width: 400px) {
-          .contact-page {
+
+          .sayhello-page {
             padding: 35px 15px;
+
+            gap: 35px;
           }
 
-          .contact-copy h1 {
+
+          .sayhello-left h1 {
             font-size: 27px;
           }
 
-          .contact-form input {
-            height: 46px;
+
+          .sayhello-subtitle {
+            font-size: 14px;
           }
 
-          .contact-form textarea {
-            min-height: 110px;
+
+          .contact-info {
+            gap: 12px;
           }
+
+
+          .contact-details p {
+            font-size: 14px;
+          }
+
+
+          .social-icons {
+            gap: 24px;
+
+            margin-top: 28px;
+          }
+
+
+          .social-icons a {
+            font-size: 24px;
+          }
+
+
+          .sayhello-form {
+            padding: 20px 14px 16px;
+
+            border-radius: 22px;
+          }
+
+
+          .sayhello-form label {
+            font-size: 12px;
+          }
+
+
+          .sayhello-form input,
+          .sayhello-form select {
+            height: 42px;
+
+            font-size: 15px;
+          }
+
+
+          .sayhello-form textarea {
+            min-height: 105px;
+
+            font-size: 15px;
+          }
+
+
+          .sayhello-submit {
+            height: 40px;
+
+            font-size: 15px;
+          }
+
         }
+
+
+        /* =====================================================
+           VERY SMALL MOBILE
+        ===================================================== */
+
+        @media (max-width: 320px) {
+
+          .sayhello-page {
+            padding-left: 12px;
+            padding-right: 12px;
+          }
+
+
+          .sayhello-left h1 {
+            font-size: 25px;
+          }
+
+
+          .social-icons {
+            gap: 20px;
+          }
+
+
+          .sayhello-form {
+            padding-left: 12px;
+            padding-right: 12px;
+          }
+
+        }
+
       `}</style>
 
-      <section className="contact-page">
-        <div className="contact-copy">
-          <div className="eyebrow">SAY HELLO</div>
 
-          <h1>Let’s start a conversation.</h1>
+      {/* =====================================================
+          MAIN SECTION
+      ===================================================== */}
 
-          <p>
-            Tell us a little about what you are working on and we’ll take it
-            from there.
+      <section className="sayhello-page">
+
+
+        {/* =====================================================
+            LEFT SIDE
+        ===================================================== */}
+
+        <div className="sayhello-left">
+
+          <h1>
+            GET IN TOUCH
+          </h1>
+
+
+          <p className="sayhello-subtitle">
+            Share your thoughts we will help you make it real!
           </p>
+
+
+          {/* PHONE */}
+
+          <div className="contact-info phone-info">
+
+            <div className="contact-icon whatsapp-icon">
+              <FaWhatsapp />
+            </div>
+
+
+            <div className="contact-details">
+
+              <p>
+                +92 300 1231234
+              </p>
+
+              <p>
+                +92 300 1231234
+              </p>
+
+            </div>
+
+          </div>
+
+
+          {/* EMAIL */}
+
+          <div className="contact-info email-info">
+
+            <div className="contact-icon email-icon">
+              <MdEmail />
+            </div>
+
+
+            <div className="contact-details">
+
+              <p>
+                info@techinsights.com
+              </p>
+
+              <p>
+                tech@insights.com
+              </p>
+
+            </div>
+
+          </div>
+
+
+          {/* SOCIAL MEDIA */}
+
+          <div className="social-icons">
+
+            <a
+              href="#"
+              aria-label="Facebook"
+            >
+              <FaFacebookF />
+            </a>
+
+
+            <a
+              href="#"
+              aria-label="Twitter"
+            >
+              <FaTwitter />
+            </a>
+
+
+            <a
+              href="#"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn />
+            </a>
+
+
+            <a
+              href="#"
+              aria-label="Instagram"
+            >
+              <FaInstagram />
+            </a>
+
+          </div>
+
         </div>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <label>
-            Name
-            <input
-              name="name"
-              required
-              placeholder="Your name"
-            />
-          </label>
+
+        {/* =====================================================
+            RIGHT FORM
+        ===================================================== */}
+
+        <form
+          className="sayhello-form"
+          onSubmit={handleSubmit}
+        >
+
+
+          {/* FULL NAME */}
 
           <label>
-            Email
+
+            <span>
+              Full Name
+            </span>
+
             <input
-              name="email"
+              type="text"
+              name="fullName"
+              required
+              placeholder="Full Name"
+            />
+
+          </label>
+
+
+          {/* EMAIL */}
+
+          <label>
+
+            <span>
+              Email Address
+            </span>
+
+            <input
               type="email"
+              name="email"
               required
-              placeholder="you@example.com"
+              placeholder="Email Address"
             />
+
           </label>
 
+
+          {/* PHONE */}
+
           <label>
-            Message
+
+            <span>
+              Phone
+            </span>
+
+            <input
+              type="tel"
+              name="phone"
+              required
+              placeholder="Phone Number"
+            />
+
+          </label>
+
+
+          {/* I AM A */}
+
+          <label>
+
+            <span>
+              I am a
+            </span>
+
+            <select
+              name="role"
+              required
+              defaultValue=""
+            >
+
+              <option
+                value=""
+                disabled
+              >
+                Select an option
+              </option>
+
+              <option value="student">
+                Student
+              </option>
+
+              <option value="business">
+                Business Owner
+              </option>
+
+              <option value="developer">
+                Developer
+              </option>
+
+              <option value="designer">
+                Designer
+              </option>
+
+              <option value="other">
+                Other
+              </option>
+
+            </select>
+
+          </label>
+
+
+          {/* MESSAGE */}
+
+          <label>
+
+            <span>
+              How can we help you?
+            </span>
+
             <textarea
               name="message"
               required
-              rows="6"
-              placeholder="Tell us about your project..."
-            />
+              placeholder="Your Message"
+            ></textarea>
+
           </label>
 
-          <button className="primary-btn" type="submit">
-            Send Message
+
+          {/* SUBMIT */}
+
+          <button
+            type="submit"
+            className="sayhello-submit"
+          >
+            Submit
           </button>
 
+
+          {/* SUCCESS */}
+
           {sent && (
-            <p className="form-success">
-              Thanks! Your demo form was submitted.
-            </p>
+            <div className="sayhello-success">
+              Thanks! Your message has been submitted.
+            </div>
           )}
+
         </form>
+
       </section>
     </>
   );
