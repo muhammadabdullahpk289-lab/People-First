@@ -65,7 +65,7 @@
   width: 100%;
   max-width: 560px;
 
-  height: auto;
+  height: 400px;
 
   object-fit: contain;
 
@@ -136,7 +136,7 @@
     width: 100%;
     max-width: 560px;
 
-    height: auto;
+    height: 200px;
 
     object-fit: contain;
   }
@@ -162,7 +162,6 @@
   .analytics-image img {
     width: 100%;
     max-width: 560px;
-
-    height: auto;
+    height: 200px;
   }
 }
