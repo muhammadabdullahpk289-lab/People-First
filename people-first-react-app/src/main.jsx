@@ -6,7 +6,7 @@ import "./styles.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/People-First">
       <App />
     </BrowserRouter>
   </React.StrictMode>
