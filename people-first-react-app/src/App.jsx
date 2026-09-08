@@ -37,7 +37,7 @@ export default function App() {
       {/* PAGES */}
       <Routes>
         {/* ACTIVE PAGE — MAIN / FRONT PAGE */}
-        <Route path="/" element={<ActivePage />} />
+        <Route path="/activepage" element={<ActivePage />} />
 
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
