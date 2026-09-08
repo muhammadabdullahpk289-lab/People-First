@@ -3,7 +3,7 @@ export default function Privacy() {
     <section
       className="legal-page"
       style={{
-        maxWidth: "1000px",
+        maxWidth: "1400px",
         margin: "0 auto",
         padding: "120px 30px 80px",
         fontFamily: "Inter, Arial, sans-serif",
