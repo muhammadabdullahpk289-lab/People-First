@@ -15,13 +15,14 @@ const WhatWeDoHero = () => {
       <div className="whatwedohero-container">
 
         {/* ================= LOGO ================= */}
+        <Link to="/active-page">
         <div className="whatwedohero-logo">
           <img
             src={logo}
             alt="People First"
           />
         </div>
-
+        </Link>
 
         {/* ================= TITLE ================= */}
         <div className="whatwedohero-title">

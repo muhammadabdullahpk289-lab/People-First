@@ -40,9 +40,11 @@ const AboutHero = () => {
       <div className="about-hero-top">
 
         {/* Logo */}
-        <div className="about-logo">
-          <img src={logo} alt="People First" />
-        </div>
+        <Link to="/active-page">
+          <div className="about-logo">
+            <img src={logo} alt="People First" />
+          </div>
+        </Link>
 
         {/* Left Content */}
         <div className="about-hero-content">
