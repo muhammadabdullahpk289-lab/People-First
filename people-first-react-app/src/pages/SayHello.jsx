@@ -37,11 +37,11 @@ export default function SayHello() {
 
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: center;
 
-          gap: 70px;
+          gap: 35px;
 
-          padding: 25px 20px 27px 30px;
+          padding: 25px 60px 27px;
 
           background: #702061;
 
@@ -56,8 +56,8 @@ export default function SayHello() {
         ===================================================== */
 
         .sayhello-left {
-          width: 43%;
-          max-width: 450px;
+          width: 45%;
+          max-width: 500px;
 
           color: #ffffff;
 
@@ -243,7 +243,7 @@ export default function SayHello() {
         ===================================================== */
 
         .sayhello-form {
-          width: 53%;
+          width: 50%;
           max-width: 545px;
 
           box-sizing: border-box;
@@ -441,17 +441,26 @@ export default function SayHello() {
         @media (min-width: 1200px) {
 
           .sayhello-page {
-            padding-left: 30px;
-            padding-right: 20px;
+            gap: 35px;
 
-            gap: 80px;
+            padding-left: 60px;
+            padding-right: 60px;
           }
+
+
+          .sayhello-left {
+            width: 45%;
+            max-width: 500px;
+          }
+
 
           .sayhello-left h1 {
             font-size: 30px;
           }
 
+
           .sayhello-form {
+            width: 50%;
             max-width: 545px;
           }
 
@@ -465,19 +474,19 @@ export default function SayHello() {
         @media (max-width: 950px) {
 
           .sayhello-page {
-            gap: 40px;
+            gap: 30px;
 
             padding: 40px 25px;
           }
 
 
           .sayhello-left {
-            width: 42%;
+            width: 44%;
           }
 
 
           .sayhello-form {
-            width: 58%;
+            width: 56%;
           }
 
 
@@ -510,7 +519,7 @@ export default function SayHello() {
         @media (max-width: 800px) {
 
           .sayhello-page {
-            gap: 30px;
+            gap: 25px;
 
             padding: 35px 20px;
           }
@@ -771,24 +780,15 @@ export default function SayHello() {
 
       `}</style>
 
-
-      {/* =====================================================
-          MAIN SECTION
-      ===================================================== */}
-
       <section className="sayhello-page">
 
-
-        {/* =====================================================
-            LEFT SIDE
-        ===================================================== */}
+        {/* LEFT SIDE */}
 
         <div className="sayhello-left">
 
           <h1>
             GET IN TOUCH
           </h1>
-
 
           <p className="sayhello-subtitle">
             Share your thoughts we will help you make it real!
@@ -802,7 +802,6 @@ export default function SayHello() {
             <div className="contact-icon whatsapp-icon">
               <FaWhatsapp />
             </div>
-
 
             <div className="contact-details">
 
@@ -826,7 +825,6 @@ export default function SayHello() {
             <div className="contact-icon email-icon">
               <MdEmail />
             </div>
-
 
             <div className="contact-details">
 
@@ -883,15 +881,12 @@ export default function SayHello() {
         </div>
 
 
-        {/* =====================================================
-            RIGHT FORM
-        ===================================================== */}
+        {/* RIGHT FORM */}
 
         <form
           className="sayhello-form"
           onSubmit={handleSubmit}
         >
-
 
           {/* FULL NAME */}
 
