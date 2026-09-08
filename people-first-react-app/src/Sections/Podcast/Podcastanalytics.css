@@ -3,13 +3,19 @@
   align-items: center;
   justify-content: space-between;
   gap: 40px;
+
   width: 1388px;
   max-width: 100%;
+
   margin: 0 auto;
   padding: 60px 40px;
-  background: #F4F4FC;
+
+  background: #f4f4fc;
+
   font-family: "Segoe UI", Arial, sans-serif;
+
   box-sizing: border-box;
+
   flex-wrap: wrap;
 }
 
@@ -37,27 +43,126 @@
   color: #141126;
 }
 
+
+/* =====================================================
+   ANALYTICS IMAGE
+===================================================== */
+
 .analytics-image {
   flex: 1 1 480px;
+
   display: flex;
+  align-items: center;
   justify-content: center;
+
+  width: 100%;
+  min-width: 0;
 }
 
 .analytics-image img {
+  display: block;
+
   width: 100%;
   max-width: 560px;
+
   height: auto;
-  display: block;
+
+  object-fit: contain;
+
   transition: transform 0.2s ease-in;
 }
 
-.analytics-image img:hover{
-    transform: scale(1.03);
+.analytics-image img:hover {
+  transform: scale(1.03);
 }
 
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1024px) {
+
+  .analytics-section {
+    gap: 30px;
+    padding: 50px 30px;
+  }
+
+  .analytics-text {
+    flex: 1 1 380px;
+  }
+
+  .analytics-image {
+    flex: 1 1 420px;
+  }
+
+  .analytics-image img {
+    width: 100%;
+    max-width: 520px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE / TABLET
+===================================================== */
+
 @media (max-width: 768px) {
+
   .analytics-section {
     flex-direction: column;
-    text-align: left;
+
+    align-items: stretch;
+
+    gap: 40px;
+
+    padding: 50px 25px;
+  }
+
+  .analytics-text {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .analytics-image {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .analytics-image img {
+    width: 100%;
+    max-width: 560px;
+
+    height: auto;
+
+    object-fit: contain;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .analytics-section {
+    gap: 30px;
+
+    padding: 40px 18px;
+  }
+
+  .analytics-image {
+    width: 100%;
+  }
+
+  .analytics-image img {
+    width: 100%;
+    max-width: 560px;
+
+    height: auto;
   }
 }
