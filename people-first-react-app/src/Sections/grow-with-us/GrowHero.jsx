@@ -14,7 +14,7 @@ export default function GrowHero({ imageSrc }) {
       ===================================================== */}
 
       <section className="growhero-section">
-        <Link to="/ActivePage">
+        <Link to="/">
         <div className="growhero-logo">
           <img
             src={logoImg}

@@ -41,7 +41,7 @@ const AboutHero = () => {
       <div className="about-hero-top">
 
         {/* Logo */}
-        <Link to="/ActivePage">
+        <Link to="/">
           <div className="about-logo">
             <img src={logo} alt="People First" />
           </div>

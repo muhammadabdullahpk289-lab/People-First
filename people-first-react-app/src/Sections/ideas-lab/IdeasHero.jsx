@@ -70,7 +70,7 @@ export default function IdeasHero() {
       {/* =====================================================
           LOGO
       ===================================================== */}
-      <Link to="/ActivePage">
+      <Link to="/">
       <div className="ideas-header">
         <img src={logo} alt="" />
       </div>

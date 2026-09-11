@@ -10,7 +10,7 @@ const HomeHero = () => {
     <section className="hero">
 
       {/* Logo */}
-      <Link to="/ActivePage">
+      <Link to="/">
         <div className="logo">
           <img src={logo} alt="People First logo mark" />
         </div>
