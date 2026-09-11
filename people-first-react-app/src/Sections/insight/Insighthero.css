@@ -1,3 +1,9 @@
+html, body {
+  overflow-x: hidden;   /* FIX: horizontal scroll rokne ke liye */
+  max-width: 100%;      /* FIX */
+}
+
+
 /* ===========================================================
    INSIGHTS PAGE — TOKENS
 =========================================================== */
@@ -28,12 +34,24 @@
     sans-serif;
 
   color: var(--ink);
-
   background: #fbfdfd;
 
   width: 100%;
+  max-width: 100%;
   min-height: 100vh;
 
+  box-sizing: border-box;
+  overflow-x: clip;
+}
+
+
+/* ===========================================================
+   GLOBAL BOX SIZING
+=========================================================== */
+
+.insights-page *,
+.insights-page *::before,
+.insights-page *::after {
   box-sizing: border-box;
 }
 
@@ -46,6 +64,8 @@
   border: 0;
   outline: none;
   vertical-align: top;
+
+  max-width: 100%;
 }
 
 
@@ -54,18 +74,26 @@
 =========================================================== */
 
 .site-header {
+  width: 100%;
+  max-width: 100%;
+
   padding: 20px 6vw 0;
 }
 
 .site-header__logo {
   display: inline-flex;
   align-items: center;
+
+  max-width: 100%;
+
   text-decoration: none;
 }
 
 .site-header__logo img {
   height: 57px;
   width: auto;
+  max-width: 100%;
+
   display: block;
 }
 
@@ -77,7 +105,12 @@
 .insights-hero {
   position: relative;
 
+  width: 100%;
+  max-width: 100%;
+
   padding: 28px 6vw 40px;
+
+  overflow: visible;
 }
 
 .insights-hero::before {
@@ -96,6 +129,8 @@
   position: relative;
 
   z-index: 1;
+
+  min-width: 0;
 }
 
 
@@ -107,10 +142,12 @@
   display: flex;
 
   align-items: center;
-
   justify-content: space-between;
 
   flex-wrap: wrap;
+
+  width: 100%;
+  max-width: 100%;
 
   gap: 16px;
 }
@@ -124,6 +161,10 @@
   display: flex;
 
   align-items: center;
+
+  flex-wrap: wrap;
+
+  max-width: 100%;
 
   gap: 12px;
 }
@@ -141,7 +182,6 @@
   cursor: pointer;
 
   font-size: 0.9rem;
-
   font-weight: 600;
 
   padding: 12px 20px;
@@ -190,12 +230,12 @@
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   width: 40px;
-
   height: 40px;
+
+  flex: 0 0 40px;
 
   border: none;
 
@@ -225,6 +265,8 @@
   position: relative;
 
   display: inline-block;
+
+  max-width: 100%;
 }
 
 
@@ -238,6 +280,8 @@
   align-items: center;
 
   gap: 10px;
+
+  max-width: 100%;
 
   padding: 10px 16px;
 
@@ -269,6 +313,8 @@
 =========================================================== */
 
 .category-dropdown__caret {
+  flex-shrink: 0;
+
   transition:
     transform 0.15s ease;
 
@@ -295,10 +341,11 @@
   position: absolute;
 
   top: 100%;
-
   left: 0;
 
   min-width: 200px;
+
+  max-width: calc(100vw - 40px);
 
   background: #fff;
 
@@ -313,7 +360,7 @@
     0 12px 24px
     rgba(16, 24, 40, 0.12);
 
-  z-index: 30;
+  z-index: 100;
 }
 
 
@@ -367,12 +414,17 @@
 
   gap: 56px;
 
+  width: 100%;
+  max-width: 100%;
+
   padding:
     0
     6vw
     64px;
 
   box-sizing: border-box;
+
+  overflow: visible;
 }
 
 
@@ -385,11 +437,14 @@
 
   display: grid;
 
+  width: 100%;
+  max-width: 100%;
+
   margin-top: 100px;
 
   grid-template-columns:
-    minmax(260px, 520px)
-    1fr;
+    minmax(0, 520px)
+    minmax(0, 1fr);
 
   align-items: center;
 
@@ -407,6 +462,9 @@
   flex-direction: column;
 
   gap: 14px;
+
+  min-width: 0;
+  max-width: 100%;
 }
 
 
@@ -416,14 +474,14 @@
 
 .insight-card__icon {
   width: 44px;
-
   height: 44px;
 
   display: flex;
 
   align-items: center;
-
   justify-content: center;
+
+  flex: 0 0 44px;
 
   background: #fff;
 
@@ -435,8 +493,6 @@
     rgba(16, 24, 40, 0.08);
 
   overflow: hidden;
-
-  flex-shrink: 0;
 }
 
 
@@ -446,15 +502,15 @@
 
 .insight-card__icon-img {
   width: 100%;
-
   height: 100%;
+
+  max-width: 100%;
 
   display: block;
 
   object-fit: contain;
 
   border: 0;
-
   outline: none;
 }
 
@@ -473,6 +529,8 @@
   margin: 0;
 
   color: var(--ink);
+
+  overflow-wrap: break-word;
 }
 
 
@@ -490,6 +548,8 @@
   margin: 0;
 
   max-width: 42ch;
+
+  overflow-wrap: break-word;
 }
 
 
@@ -501,6 +561,8 @@
   display: flex;
 
   align-items: baseline;
+
+  flex-wrap: wrap;
 
   gap: 12px;
 
@@ -533,6 +595,8 @@
   line-height: 1.35;
 
   color: var(--muted);
+
+  max-width: 100%;
 }
 
 
@@ -544,8 +608,15 @@
   position: relative;
 
   width: 100%;
+  max-width: 100%;
+
+  min-width: 0;
 
   z-index: 1;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-lg);
 }
 
 
@@ -559,11 +630,9 @@
   position: absolute;
 
   width: 125%;
-
   height: 140%;
 
   left: -12.5%;
-
   top: -20%;
 
   background:
@@ -623,6 +692,9 @@
   display: block;
 
   width: 100%;
+  max-width: 100%;
+
+  height: auto;
 
   aspect-ratio: 16 / 10;
 
@@ -661,6 +733,8 @@
     var(--radius-sm);
 
   min-width: 150px;
+
+  max-width: calc(100% - 20px);
 
   box-shadow:
     0 12px 24px
@@ -710,10 +784,10 @@
   position: absolute;
 
   left: 0;
-
   right: 0;
-
   bottom: 0;
+
+  max-width: 100%;
 
   padding: 14px 20px;
 
@@ -733,6 +807,8 @@
     0
     var(--radius-lg)
     var(--radius-lg);
+
+  overflow-wrap: break-word;
 }
 
 
@@ -758,9 +834,12 @@
 .podcast-teaser {
   display: grid;
 
+  width: auto;
+  max-width: calc(100% - 12vw);
+
   grid-template-columns:
     minmax(220px, 360px)
-    1fr;
+    minmax(0, 1fr);
 
   gap: 32px;
 
@@ -803,6 +882,9 @@
 
 .podcast-teaser__image {
   width: 100%;
+  max-width: 100%;
+
+  height: auto;
 
   aspect-ratio: 16 / 10;
 
@@ -847,6 +929,8 @@
     8px;
 
   color: var(--ink);
+
+  overflow-wrap: break-word;
 }
 
 
@@ -867,6 +951,8 @@
     12px;
 
   max-width: 52ch;
+
+  overflow-wrap: break-word;
 }
 
 
@@ -884,34 +970,145 @@
 
 
 /* ===========================================================
+   LARGE LAPTOP
+=========================================================== */
+
+@media (max-width: 1200px) {
+
+  .site-header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .insights-hero {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .insight-cards {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .insight-card {
+    grid-template-columns:
+      minmax(0, 42%)
+      minmax(0, 1fr);
+
+    gap: 32px;
+
+    margin-top: 75px;
+  }
+
+  .insight-card__description {
+    max-width: 100%;
+  }
+
+  .insight-card__badge {
+    left: 16px;
+  }
+
+  .podcast-teaser {
+    max-width: calc(100% - 80px);
+
+    margin-left: 40px;
+    margin-right: 40px;
+
+    grid-template-columns:
+      minmax(200px, 32%)
+      minmax(0, 1fr);
+  }
+}
+
+
+/* ===========================================================
    TABLET
 =========================================================== */
 
 @media (max-width: 900px) {
 
-  .insight-card,
+  .site-header {
+    padding:
+      20px
+      32px
+      0;
+  }
+
+  .insights-hero {
+    padding:
+      28px
+      32px
+      40px;
+  }
+
+  .insights-hero__controls {
+    align-items: flex-start;
+  }
+
+  .insight-cards {
+    padding:
+      0
+      32px
+      64px;
+
+    gap: 45px;
+  }
+
+  .insight-card {
+    width: 100%;
+    max-width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+    margin-top: 55px;
+  }
+
+  .insight-card__text {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .insight-card__media {
+    width: 100%;
+    max-width: 100%;
+
+    overflow: hidden;
+  }
+
+  .insight-card__media::before {
+    width: 120%;
+    height: 125%;
+
+    left: -10%;
+    top: -12%;
+  }
+
+  .insight-card__image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .insight-card__badge {
+    left: 16px;
+    bottom: -22px;
+  }
+
   .podcast-teaser {
+    width: auto;
+    max-width: calc(100% - 64px);
+
+    margin-left: 32px;
+    margin-right: 32px;
+
     grid-template-columns: 1fr;
 
     gap: 24px;
   }
 
-
-  .insight-card__media::before {
-    width: 120%;
-
-    height: 125%;
-
-    left: -10%;
-
-    top: -12%;
-  }
-
-
-  .insight-card__badge {
-    left: 16px;
-
-    bottom: -24px;
+  .podcast-teaser__image {
+    width: 100%;
   }
 }
 
@@ -923,88 +1120,160 @@
 @media (max-width: 560px) {
 
   .site-header {
+    width: 100%;
+
     padding:
       16px
-      5vw
+      20px
       0;
   }
 
-
   .site-header__logo img {
     height: 48px;
+
+    max-width: 180px;
   }
 
-
   .insights-hero {
+    width: 100%;
+
     padding:
       24px
-      5vw
+      20px
       32px;
   }
 
-
   .insights-hero__controls {
+    width: 100%;
+
     align-items: flex-start;
 
     flex-direction: column;
-  }
 
+    gap: 14px;
+  }
 
   .insights-hero__actions {
     width: 100%;
 
     flex-wrap: wrap;
+
+    gap: 8px;
   }
 
+  .category-dropdown {
+    width: auto;
+
+    max-width: 100%;
+  }
+
+  .category-dropdown__trigger {
+    max-width: 100%;
+  }
+
+  .category-dropdown__list {
+    min-width: 180px;
+
+    max-width:
+      calc(100vw - 40px);
+  }
 
   .insight-cards {
+    width: 100%;
+
     gap: 42px;
 
     padding:
       0
-      5vw
-      48px;
+      20px
+      50px;
   }
-
 
   .insight-card {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
     gap: 22px;
 
-    margin-top: 70px;
+    margin-top: 50px;
   }
 
+  .insight-card__text {
+    width: 100%;
 
-  /* ------------------------------
-     MOBILE IMAGE GRADIENT
-  ------------------------------ */
+    min-width: 0;
 
-  .insight-card__media::before {
-    width: 140%;
-
-    height: 135%;
-
-    left: -20%;
-
-    top: -17%;
-
-    filter: blur(30px);
+    max-width: 100%;
   }
 
+  .insight-card__icon {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+  }
 
   .insight-card__title {
     font-size: 1.3rem;
-  }
 
+    line-height: 1.3;
+  }
 
   .insight-card__description {
+    width: 100%;
+
+    max-width: 100%;
+
     font-size: 0.9rem;
+
+    line-height: 1.55;
   }
 
+  .insight-card__stat {
+    width: 100%;
+
+    flex-wrap: wrap;
+  }
 
   .insight-card__stat-value {
     font-size: 1.9rem;
   }
 
+  .insight-card__media {
+    width: 100%;
+    max-width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+  }
+
+  .insight-card__media::before {
+    width: 140%;
+    height: 135%;
+
+    left: -20%;
+    top: -17%;
+
+    filter: blur(30px);
+  }
+
+  .insight-card__image {
+    width: 100%;
+    max-width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+
+    border-radius: 16px;
+  }
 
   .insight-card__badge {
     left: 16px;
@@ -1013,14 +1282,59 @@
 
     min-width: 130px;
 
+    max-width: calc(100% - 32px);
+
     padding:
       14px
       16px;
   }
 
-
   .insight-card__badge-year {
     font-size: 1.45rem;
+  }
+
+  .insight-card__badge-label {
+    font-size: 0.68rem;
+  }
+
+  .insight-card__caption {
+    padding:
+      12px
+      16px;
+
+    font-size: 0.72rem;
+  }
+
+  .podcast-teaser {
+    width: calc(100% - 40px);
+
+    max-width: calc(100% - 40px);
+
+    margin:
+      0
+      20px
+      48px;
+
+    padding: 14px;
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .podcast-teaser__image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .podcast-teaser__title {
+    font-size: 1.05rem;
+  }
+
+  .podcast-teaser__description {
+    font-size: 0.85rem;
+
+    max-width: 100%;
   }
 }
 
@@ -1031,10 +1345,23 @@
 
 @media (max-width: 380px) {
 
+  .site-header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .site-header__logo img {
+    height: 44px;
+  }
+
+  .insights-hero {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   .insights-hero__actions {
     gap: 8px;
   }
-
 
   .btn {
     font-size: 0.8rem;
@@ -1044,26 +1371,80 @@
       14px;
   }
 
+  .insight-cards {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .insight-card {
+    margin-top: 40px;
+
+    gap: 20px;
+  }
 
   .insight-card__icon {
     width: 40px;
-
     height: 40px;
-  }
 
+    flex-basis: 40px;
+  }
 
   .insight-card__title {
     font-size: 1.2rem;
   }
 
+  .insight-card__description {
+    font-size: 0.86rem;
+  }
+
+  .insight-card__stat-value {
+    font-size: 1.7rem;
+  }
+
+  .insight-card__badge {
+    left: 10px;
+
+    bottom: -18px;
+
+    min-width: 110px;
+
+    padding:
+      12px
+      14px;
+  }
+
+  .insight-card__badge-year {
+    font-size: 1.3rem;
+  }
 
   .insight-card__media::before {
     width: 150%;
-
     height: 140%;
 
     left: -25%;
-
     top: -20%;
   }
+
+  .podcast-teaser {
+    width: calc(100% - 32px);
+
+    max-width: calc(100% - 32px);
+
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+
+/* ===========================================================
+   EXTRA SAFETY — PREVENT HORIZONTAL OVERFLOW
+=========================================================== */
+
+.insights-page .insight-card,
+.insights-page .insight-card__text,
+.insights-page .insight-card__media,
+.insights-page .podcast-teaser,
+.insights-page .podcast-teaser > * {
+  min-width: 0;
+  max-width: 100%;
 }
