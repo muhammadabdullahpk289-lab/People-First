@@ -15,7 +15,7 @@ const WhatWeDoHero = () => {
       <div className="whatwedohero-container">
 
         {/* ================= LOGO ================= */}
-        <Link to="/active-page">
+        <Link to="/ActivePage">
         <div className="whatwedohero-logo">
           <img
             src={logo}

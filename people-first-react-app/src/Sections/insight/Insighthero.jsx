@@ -366,7 +366,7 @@ export default function InsightsPage() {
       <header className="site-header">
 
         <a
-          href="/active-page"
+          href="/ActivePage"
           className="site-header__logo"
         >
 

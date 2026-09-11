@@ -10,7 +10,7 @@ export default function PodcastHero({ imageSrc }) {
     <div className="podcast-hero">
       {/* ---------- Hero Section ---------- */}
       <section className="hero-section">
-        <Link to="/active-page">
+        <Link to="/ActivePage">
         <div className="hero-logo">
           <img src={logoImg} alt="People First" className="hero-logo-img" />
         </div>

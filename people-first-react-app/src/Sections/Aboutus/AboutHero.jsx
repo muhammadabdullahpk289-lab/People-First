@@ -40,7 +40,7 @@ const AboutHero = () => {
       <div className="about-hero-top">
 
         {/* Logo */}
-        <Link to="/active-page">
+        <Link to="/ActivePage">
           <div className="about-logo">
             <img src={logo} alt="People First" />
           </div>
