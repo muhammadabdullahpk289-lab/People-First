@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Homehero.css";
 
 import logo from "../../assets/Home-img/logo.svg";

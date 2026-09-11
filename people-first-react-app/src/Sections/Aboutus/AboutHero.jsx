@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./AboutHero.css";
 
 // Apni actual image paths yahan replace kar dena

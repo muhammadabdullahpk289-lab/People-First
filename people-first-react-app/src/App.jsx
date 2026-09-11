@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 
+// Pages
 import ActivePage from "./pages/ActivePage";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -13,6 +14,7 @@ import Terms from "./pages/Terms";
 import Cookies from "./pages/Cookies";
 import SayHello from "./pages/SayHello";
 
+// Components
 import SideNavbar from "./components/SideNavbar";
 import Footer from "./components/Footer";
 
@@ -34,11 +36,12 @@ export default function App() {
       {/* SIDE NAVBAR */}
       {!hideSideNavbar && <SideNavbar />}
 
-      {/* PAGES */}
+      {/* ROUTES */}
       <Routes>
-        {/* ACTIVE PAGE — MAIN / FRONT PAGE */}
+        {/* Main / Active Page */}
         <Route path="/" element={<ActivePage />} />
 
+        {/* Main Pages */}
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/podcasts" element={<Podcasts />} />
@@ -46,9 +49,13 @@ export default function App() {
         <Route path="/grow-with-us" element={<GrowWithUs />} />
         <Route path="/ideas-lab" element={<IdeasLab />} />
         <Route path="/insights" element={<Insights />} />
+
+        {/* Legal Pages */}
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/cookies" element={<Cookies />} />
+
+        {/* Contact Page */}
         <Route path="/say-hello" element={<SayHello />} />
       </Routes>
 

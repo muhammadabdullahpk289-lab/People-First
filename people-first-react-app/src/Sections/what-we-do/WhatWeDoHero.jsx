@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./WhatWeDoHero.css";
 
 import logo from '../../assets/what-we-do-img/logo.svg';
